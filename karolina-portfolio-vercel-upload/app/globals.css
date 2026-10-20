@@ -1257,8 +1257,8 @@ h3 {
 
 .process-grid article {
   min-height: 384px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr 96px 116px;
   padding: var(--space-4);
   border-right: 1px solid var(--line);
 }
@@ -1271,14 +1271,18 @@ h3 {
   border-right: 0;
 }
 
+.process-grid article > span {
+  margin-bottom: 0;
+}
+
 .process-grid h3 {
-  min-height: 2.4em;
-  display: flex;
-  align-items: flex-end;
+  min-height: 0;
+  display: block;
 }
 
 .process-grid article > p {
-  min-height: 6.4em;
+  min-height: 0;
+  margin-bottom: 0;
 }
 
 .insight-panel {
@@ -1693,6 +1697,15 @@ h3 {
   .process-grid h3,
   .process-grid article > p {
     min-height: 0;
+  }
+
+  .process-grid article {
+    display: flex;
+    grid-template-rows: none;
+  }
+
+  .process-grid article > span {
+    margin-bottom: auto;
   }
 
   .contribution-marker {
