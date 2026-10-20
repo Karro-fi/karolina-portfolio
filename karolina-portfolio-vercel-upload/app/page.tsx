@@ -305,7 +305,7 @@ export default function PortfolioHome() {
         <div className="site-shell lia-grid">
           <div>
             <p className="eyebrow">Nästa kapitel</p>
-            <h2>Jag söker LIA inom UX.</h2>
+            <h2>Jag söker LIA inom digital design.</h2>
           </div>
           <div className="lia-copy">
             <p className="prose-large">
