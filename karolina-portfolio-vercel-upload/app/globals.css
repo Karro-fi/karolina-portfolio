@@ -982,6 +982,14 @@ h3 {
   line-height: 1.55;
 }
 
+/* Keep body copy on the AcadeMedia case compact and rhythmically consistent. */
+.academedia-case p:not(.eyebrow):not(.case-index),
+.academedia-case li,
+.academedia-case dd,
+.academedia-case figcaption {
+  line-height: 1.48;
+}
+
 .prose-large p,
 .prose-large > p {
   margin-bottom: var(--space-3);
@@ -1263,6 +1271,16 @@ h3 {
   border-right: 0;
 }
 
+.process-grid h3 {
+  min-height: 2.4em;
+  display: flex;
+  align-items: flex-end;
+}
+
+.process-grid article > p {
+  min-height: 6.4em;
+}
+
 .insight-panel {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1285,7 +1303,7 @@ h3 {
 
 .insight-columns h4 {
   margin-bottom: var(--space-2);
-  padding-left: var(--space-3);
+  padding-left: 0;
   color: var(--accent);
   font-size: 0.875rem;
   letter-spacing: 0.04em;
@@ -1526,13 +1544,13 @@ h3 {
   font-family: var(--font-sora), sans-serif;
   transition:
     color 180ms ease,
-    padding 180ms ease;
+    background-color 180ms ease;
 }
 
 .footer-contact-links a:hover,
 .footer-contact-links a:focus-visible {
-  padding-inline: var(--space-1);
   color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 4%, transparent);
 }
 
 .footer-contact-links a > span:first-child {
@@ -1551,6 +1569,12 @@ h3 {
 
 .footer-contact-links a > span:last-child {
   color: var(--accent);
+  transition: transform 180ms ease;
+}
+
+.footer-contact-links a:hover > span:last-child,
+.footer-contact-links a:focus-visible > span:last-child {
+  transform: translate(3px, -3px);
 }
 
 .footer-meta {
@@ -1664,6 +1688,11 @@ h3 {
   .process-grid article:last-child,
   .principle-grid article:last-child {
     border-bottom: 0;
+  }
+
+  .process-grid h3,
+  .process-grid article > p {
+    min-height: 0;
   }
 
   .contribution-marker {

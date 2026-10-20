@@ -26,10 +26,10 @@ export default function SiteFooter({
             <span aria-hidden="true">↗</span>
           </a>
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/karolina-paraskevas-887808200/"
             target="_blank"
             rel="noreferrer"
-            aria-label="LinkedIn, platshållare"
+            aria-label="Karolina Paraskevas på LinkedIn"
           >
             <span>LinkedIn</span>
             <strong>LinkedIn</strong>
