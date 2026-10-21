@@ -24,7 +24,6 @@ type GalleryImage = {
 };
 
 export type EditorialCaseProps = {
-  period: string;
   readingTime: string;
   eyebrow: string;
   title: string;
@@ -91,7 +90,7 @@ export default function EditorialCase(props: EditorialCaseProps) {
             initialHref="#case"
             items={[
               { href: '/', label: 'Alla projekt' },
-              { href: '#case', label: 'Case study' },
+              { href: '#case', label: 'Översikt' },
               { href: '#process', label: 'Process' },
               { href: '#solution', label: 'Lösning' },
               { href: '#reflection', label: 'Reflektion' },
@@ -143,7 +142,7 @@ export default function EditorialCase(props: EditorialCaseProps) {
             <h2>{props.challengeTitle}</h2>
           </div>
           <div className="prose-large">
-            {props.challengeText.slice(0, 2).map((paragraph) => (
+            {props.challengeText.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
@@ -282,10 +281,10 @@ export default function EditorialCase(props: EditorialCaseProps) {
       <a className="next-case" href={props.nextHref}>
         <span>Nästa case</span>
         <strong>{props.nextLabel}</strong>
-        <span aria-hidden="true">↗</span>
+        <span aria-hidden="true">→</span>
       </a>
 
-      <SiteFooter backHref="/" backLabel="Till portfolion ↗" />
+      <SiteFooter backHref="/" backLabel="← Till portfolion" />
     </main>
   );
 }
