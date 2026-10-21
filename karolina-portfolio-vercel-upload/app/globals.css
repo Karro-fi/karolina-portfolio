@@ -861,7 +861,7 @@ h1 {
 }
 
 .expertise-cluster + .expertise-cluster {
-  margin-top: var(--space-5);
+  margin-top: var(--space-4);
 }
 
 .expertise-label {
