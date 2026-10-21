@@ -10,9 +10,6 @@ type ProcessStep = {
   number: string;
   title: string;
   text: string;
-  image?: string;
-  imageAlt?: string;
-  caption?: string;
 };
 
 type Principle = {
@@ -28,6 +25,7 @@ type GalleryImage = {
 
 export type EditorialCaseProps = {
   period: string;
+  readingTime: string;
   eyebrow: string;
   title: string;
   intro: string;
@@ -35,13 +33,11 @@ export type EditorialCaseProps = {
   hero: GalleryImage;
   challengeTitle: string;
   challengeText: string[];
-  designQuestion: string;
-  focusAreas: string[];
-  problemTitle: string;
+  designQuestion: string[];
   problemText: string;
   solutionTitle: string;
   solutionText: string;
-  contributionTitle: string;
+  contributionTitle: string[];
   contributionIntro: string;
   contributionItems: string[];
   contributionImage: GalleryImage;
@@ -109,7 +105,9 @@ export default function EditorialCase(props: EditorialCaseProps) {
         <div className="site-shell">
           <div className="eyebrow-row">
             <p className="eyebrow">{props.eyebrow}</p>
-            <p className="case-index">Projektperiod · {props.period}</p>
+            <div className="case-context" aria-label="Projektinformation">
+              <p className="case-index">Lästid · {props.readingTime}</p>
+            </div>
           </div>
           <h1>{props.title}</h1>
           <p className="hero-intro">{props.intro}</p>
@@ -155,7 +153,11 @@ export default function EditorialCase(props: EditorialCaseProps) {
       <section className="section statement-section">
         <div className="site-shell statement-grid">
           <p className="eyebrow">Designfråga</p>
-          <blockquote>{props.designQuestion}</blockquote>
+          <blockquote>
+            {props.designQuestion.map((line) => (
+              <span className="heading-line" key={line}>{line}</span>
+            ))}
+          </blockquote>
         </div>
       </section>
 
@@ -163,14 +165,22 @@ export default function EditorialCase(props: EditorialCaseProps) {
         <div className="site-shell contribution-grid">
           <div className="contribution-marker">
             <span>Min roll</span>
-            <strong>{props.meta[0]?.value}</strong>
+            <strong>
+              {props.meta[0]?.value.split(' · ').map((role) => (
+                <span className="heading-line" key={role}>{role}</span>
+              ))}
+            </strong>
           </div>
           <div className="contribution-copy">
             <p className="eyebrow">Mitt bidrag</p>
-            <h2>{props.contributionTitle}</h2>
+            <h2>
+              {props.contributionTitle.map((line) => (
+                <span className="heading-line" key={line}>{line}</span>
+              ))}
+            </h2>
             <p className="prose-large">{props.contributionIntro}</p>
             <ul className="contribution-list">
-              {props.contributionItems.slice(0, 4).map((item) => <li key={item}>{item}</li>)}
+              {props.contributionItems.map((item) => <li key={item}>{item}</li>)}
             </ul>
           </div>
         </div>
@@ -185,7 +195,7 @@ export default function EditorialCase(props: EditorialCaseProps) {
           </div>
 
           <div className="process-grid">
-            {props.processSteps.slice(0, 3).map((step) => (
+            {props.processSteps.map((step) => (
               <article key={step.number}>
                 <span>{step.number}</span>
                 <h3>{step.title}</h3>
@@ -230,7 +240,7 @@ export default function EditorialCase(props: EditorialCaseProps) {
           <h2>Detaljer som bär helheten.</h2>
         </div>
         <div className="site-shell learning-gallery">
-          {props.gallery.slice(0, 2).map((image, index) => (
+          {props.gallery.map((image, index) => (
             <BrowserFrame key={image.src} label={`Vy 0${index + 1}`} image={image} />
           ))}
         </div>
@@ -239,11 +249,11 @@ export default function EditorialCase(props: EditorialCaseProps) {
       <section className="section principle-section section-rule">
         <div className="site-shell">
           <div className="section-heading compact-heading">
-            <p className="eyebrow">Designprinciper</p>
+            <p className="eyebrow">Bärande designbeslut</p>
             <h2>{props.principlesTitle}</h2>
           </div>
           <div className="principle-grid">
-            {props.principles.slice(0, 3).map((principle, index) => (
+            {props.principles.map((principle, index) => (
               <article key={principle.title}>
                 <span>0{index + 1}</span>
                 <h3>{principle.title}</h3>
