@@ -21,9 +21,8 @@ export const metadata: Metadata = {
 export default function DuroCase() {
   return (
     <EditorialCase
-      period="2026 Q1"
       readingTime="4 min"
-      eyebrow="Case study · UX/UI & tillgänglighet"
+      eyebrow="UX/UI-case · Tillgänglighet"
       title="Duro Sweden: tillgänglig webbhandel"
       intro="En tre veckor lång redesign av Duros webbhandel, skapad för att möta WCAG 2.1 AA, förenkla produktfiltreringen och göra vägen till rätt tapet mer begriplig."
       meta={[
@@ -54,7 +53,7 @@ export default function DuroCase() {
         'Jag omsatte insikter',
         'till tillgängliga designbeslut.',
       ]}
-      contributionIntro="Jag hade en drivande designroll och samarbetade nära med en teammedlem i Figma för att bygga och kvalitetssäkra prototyperna."
+      contributionIntro="Jag drev designarbetet och samarbetade med en teammedlem för att bygga, testa och kvalitetssäkra prototyperna i Figma."
       contributionItems={[
         'Byggde komponenter, tillstånd och prototypflöden i Figma.',
         'Sorterade färger och mönster alfabetiskt för lägre kognitiv belastning.',
@@ -89,11 +88,6 @@ export default function DuroCase() {
       galleryIntro="Resultatet skapar en lugnare produktöversikt och en tydligare informationsarkitektur även i stödjande innehåll."
       gallery={[
         {
-          src: '/images/duro-product-grid.png',
-          alt: 'Produktgrid för tapeter med tydliga knappar för filtrering och sortering.',
-          caption: 'Produktgriden prioriterar produkterna och ger filtreringen en självklar, synlig startpunkt.',
-        },
-        {
           src: '/images/duro-faq.png',
           alt: 'Redesignad sida med frågor och svar för Duro Sweden.',
           caption: 'Frågor och svar får mer luft, tydligare kontraster och en skannbar kategoristruktur.',
@@ -107,7 +101,7 @@ export default function DuroCase() {
       ]}
       reflectionTitle="Tillgänglighet avgörs i detaljerna."
       reflectionText={[
-        'Projektets viktigaste vändpunkt kom när vi bromsade prototyparbetet och återvände till research. När antaganden ersattes av data blev designbesluten både tydligare och lättare att motivera.',
+        'Projektets viktigaste vändpunkt kom när vi bromsade prototyparbetet och återvände till underlaget. När antaganden ersattes av data blev designbesluten både tydligare och lättare att motivera.',
         'Testet med en person som har ADHD visade konkret hur textmängd och klarhet i popupfönster påverkar användbarheten. En missad fokusindikator blev samtidigt en påminnelse om hur ett enda avbrott kan skapa en stor barriär.',
       ]}
       quote="Det räcker inte att designen i övrigt är konsekvent. En enda miss i navigeringen kan skapa stora hinder."
