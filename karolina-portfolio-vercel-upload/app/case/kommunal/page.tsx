@@ -26,7 +26,7 @@ export default function KommunalCase() {
       title="Kommunal Måendestöd"
       intro="En vidareutveckling av ett digitalt måendestöd för Kommunals medlemmar med fokus på lägre kognitiv belastning, tydligare självskattning och mer begripliga resultat."
       meta={[
-        { label: 'Min roll', value: 'UX/UI designer & prototyper' },
+        { label: 'Min roll', value: 'UX/UI-designer · prototypansvar' },
         { label: 'Team', value: '2 Experience Designers' },
         { label: 'Period', value: '2025 Q2' },
         { label: 'Verktyg', value: 'Figma & FigJam' },
@@ -47,7 +47,7 @@ export default function KommunalCase() {
       problemText="Binära svar, symboler utan förklaring och ett svårtolkat linjediagram gjorde tjänsten svår att skanna och gav användaren begränsad kontroll över flödet."
       solutionTitle="Ett lugnare och mer vägledande flöde"
       solutionText="En stegvis självskattning med tydlig status, igenkännbara kategorier och en resultatvy som översätter komplex data till direkt visuell återkoppling."
-      contributionTitle="Detaljskärpa genom hela resan."
+      contributionTitle="Jag formgav ett tydligare självskattningsflöde."
       contributionIntro="Jag kvalitetssäkrade användarresan och tog ett särskilt ansvar för självskattningsformuläret, från visuell struktur till interaktionsdetaljer."
       contributionItems={[
         'Formgav självskattningen med en skala från 1 till 5 och tre tydliga interaktionslägen.',
@@ -66,13 +66,13 @@ export default function KommunalCase() {
       processSteps={[
         {
           number: '01',
-          title: 'Research & integration',
+          title: 'Research & analys',
           text: 'Vi återvände till tidigare testresultat och ringade in tre huvudproblem: funktionen var dold, självskattningen saknade vägledning och resultatet krävde för mycket tolkning.',
         },
         {
           number: '02',
           title: 'Formulär & interaktion',
-          text: 'Vi itererade ett lugnare frågeflöde med whitespace, stegindikator, kategoribilder och en skala som gav mer nyanserad återkoppling än ja eller nej.',
+          text: 'Vi itererade ett lugnare frågeflöde med mer luft, stegindikator, kategoribilder och en skala som gav mer nyanserad återkoppling än ja eller nej.',
           image: '/images/kommunal-self-assessment.png',
           imageAlt: 'Jämförelse före och efter av självskattningsformuläret.',
           caption: 'Den nya versionen gör progression, kategori och nästa handling synliga samtidigt.',
@@ -102,7 +102,7 @@ export default function KommunalCase() {
       ]}
       principlesTitle="Tre beslut som minskar belastningen."
       principles={[
-        { title: 'Whitespace matters', text: 'Luft mellan elementen dämpar visuellt brus och låter en stressad användare fokusera på en fråga i taget.' },
+        { title: 'Luft skapar fokus', text: 'Luft mellan elementen dämpar visuellt brus och låter en stressad användare fokusera på en fråga i taget.' },
         { title: 'Igenkänning framför minne', text: 'Samma färger och ikoner används i formulär och resultat för att skapa en tydlig röd tråd.' },
         { title: 'Synlig systemstatus', text: 'Stepper, progression och direkt återkoppling ger kontroll över både nuvarande och nästa steg.' },
       ]}
