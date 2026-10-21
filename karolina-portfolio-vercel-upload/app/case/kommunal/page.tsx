@@ -21,9 +21,8 @@ export const metadata: Metadata = {
 export default function KommunalCase() {
   return (
     <EditorialCase
-      period="2025 Q2"
       readingTime="4 min"
-      eyebrow="Case study · UI design & prototyping"
+      eyebrow="UX/UI-case · Självskattning"
       title="Kommunal Måendestöd"
       intro="En vidareutveckling av ett digitalt måendestöd för Kommunals medlemmar med fokus på lägre kognitiv belastning, tydligare självskattning och mer begripliga resultat."
       meta={[
@@ -43,8 +42,9 @@ export default function KommunalCase() {
         'Självskattningen gav liten återkoppling om progression, och resultatöversiktens linjediagram var svårt att läsa. Utmaningen var att minska brus utan att förenkla bort viktig information.',
       ]}
       designQuestion={[
-        'Hur kan ett känsligt självskattningsflöde',
-        'bli lättare att hitta, förstå och fullfölja?',
+        'Hur kan ett känsligt',
+        'självskattningsflöde bli enklare',
+        'att hitta, förstå och fullfölja?',
       ]}
       problemText="Binära svar, symboler utan förklaring och ett svårtolkat linjediagram gjorde tjänsten svår att skanna och gav användaren begränsad kontroll över flödet."
       solutionTitle="Ett lugnare och mer vägledande flöde"
@@ -87,11 +87,6 @@ export default function KommunalCase() {
       galleryTitle="Ett sammanhållet stöd för reflektion."
       galleryIntro="Lösningen bär Kommunals uttryck men prioriterar lugn, igenkänning och tydliga nästa steg genom hela tjänsten."
       gallery={[
-        {
-          src: '/images/kommunal-overview.png',
-          alt: 'Kommunals måendestöd i den nya inloggade miljön.',
-          caption: 'Måendestödet integrerat i Mina sidor med tydliga ingångar och konsekvent hierarki.',
-        },
         {
           src: '/images/kommunal-mobile.png',
           alt: 'Mobil presentation av Kommunal Måendestöd.',
