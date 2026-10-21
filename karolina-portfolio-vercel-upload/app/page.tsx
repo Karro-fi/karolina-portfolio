@@ -91,7 +91,7 @@ export default function PortfolioHome() {
                   informationsöverflöd och gör nästa steg lättare att förstå.
                 </p>
                 <span>
-                  Läs projektet <span aria-hidden="true">→</span>
+                  Läs projektet <span aria-hidden="true">↗</span>
                 </span>
               </div>
             </a>
@@ -116,7 +116,7 @@ export default function PortfolioHome() {
                   steg lättare att förstå.
                 </p>
                 <span>
-                  Läs projektet <span aria-hidden="true">→</span>
+                  Läs projektet <span aria-hidden="true">↗</span>
                 </span>
               </div>
             </a>
@@ -141,7 +141,7 @@ export default function PortfolioHome() {
                   väg genom sortimentet.
                 </p>
                 <span>
-                  Läs projektet <span aria-hidden="true">→</span>
+                  Läs projektet <span aria-hidden="true">↗</span>
                 </span>
               </div>
             </a>
