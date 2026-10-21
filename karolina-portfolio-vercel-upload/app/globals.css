@@ -325,7 +325,7 @@ h1 {
   grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
   align-items: end;
   gap: var(--space-8);
-  margin-top: var(--space-10);
+  margin-top: var(--space-6);
 }
 
 .portfolio-hero-bottom .hero-intro {
@@ -549,6 +549,8 @@ h1 {
   align-self: flex-start;
   max-width: 400px;
   margin-top: calc(var(--space-3) + var(--space-2));
+  font-size: var(--type-body);
+  line-height: 1.6;
   text-align: right;
 }
 
@@ -559,8 +561,70 @@ h1 {
 }
 
 .value-grid article {
+  position: relative;
   padding-top: var(--space-3);
   border-top: 1px solid var(--line);
+}
+
+.home-contribution.reveal-ready .value-grid article {
+  --reveal-delay: 0ms;
+
+  border-top-color: transparent;
+}
+
+.home-contribution.reveal-ready .value-grid article:nth-child(2) {
+  --reveal-delay: 120ms;
+}
+
+.home-contribution.reveal-ready .value-grid article:nth-child(3) {
+  --reveal-delay: 240ms;
+}
+
+.home-contribution.reveal-ready .value-grid article::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: var(--line);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 640ms cubic-bezier(0.22, 1, 0.36, 1)
+    var(--reveal-delay);
+}
+
+.home-contribution.reveal-ready .value-grid article > span,
+.home-contribution.reveal-ready .value-grid article > h3,
+.home-contribution.reveal-ready .value-grid article > p {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 480ms ease,
+    transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-contribution.reveal-ready .value-grid article > span {
+  transition-delay: calc(var(--reveal-delay) + 100ms);
+}
+
+.home-contribution.reveal-ready .value-grid article > h3 {
+  transition-delay: calc(var(--reveal-delay) + 170ms);
+}
+
+.home-contribution.reveal-ready .value-grid article > p {
+  transition-delay: calc(var(--reveal-delay) + 240ms);
+}
+
+.home-contribution.reveal-ready.is-revealed .value-grid article::before {
+  transform: scaleX(1);
+}
+
+.home-contribution.reveal-ready.is-revealed .value-grid article > span,
+.home-contribution.reveal-ready.is-revealed .value-grid article > h3,
+.home-contribution.reveal-ready.is-revealed .value-grid article > p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .value-grid article > span {
@@ -787,7 +851,7 @@ h1 {
 
   .portfolio-hero-bottom {
     gap: var(--space-4);
-    margin-top: var(--space-6);
+    margin-top: var(--space-4);
   }
 
   .home-work {
@@ -858,6 +922,17 @@ h1 {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+  }
+
+  .home-contribution.reveal-ready .value-grid article::before {
+    transform: scaleX(1);
+  }
+
+  .home-contribution.reveal-ready .value-grid article > span,
+  .home-contribution.reveal-ready .value-grid article > h3,
+  .home-contribution.reveal-ready .value-grid article > p {
+    opacity: 1;
+    transform: none;
   }
 }
 

@@ -1,3 +1,4 @@
+import ContributionRevealSection from './ContributionRevealSection';
 import SiteFooter from './SiteFooter';
 import SiteNavigation from './SiteNavigation';
 
@@ -164,7 +165,10 @@ export default function PortfolioHome() {
         </div>
       </section>
 
-      <section className="home-contribution section-rule" id="contribution">
+      <ContributionRevealSection
+        className="home-contribution section-rule"
+        id="contribution"
+      >
         <div className="site-shell">
           <div className="home-section-head contribution-heading">
             <div>
@@ -203,7 +207,7 @@ export default function PortfolioHome() {
             </article>
           </div>
         </div>
-      </section>
+      </ContributionRevealSection>
 
       <section className="home-about section-rule" id="about">
         <div className="site-shell">
