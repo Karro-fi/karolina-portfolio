@@ -2008,16 +2008,12 @@ h3 {
   border-bottom: 1px solid var(--line);
   font-family: var(--font-sora), sans-serif;
   transition:
-    color 180ms ease,
-    background-color 180ms ease,
-    box-shadow 180ms ease;
+    color 180ms ease;
 }
 
 .footer-contact-links a:hover,
 .footer-contact-links a:focus-visible {
   color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 4%, transparent);
-  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--accent) 56%, transparent);
 }
 
 .footer-contact-links a > span:first-child {
