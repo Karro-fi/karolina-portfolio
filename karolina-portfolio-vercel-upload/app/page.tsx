@@ -1,10 +1,12 @@
 import ContributionRevealSection from './ContributionRevealSection';
+import PortfolioEffects from './PortfolioEffects';
 import SiteFooter from './SiteFooter';
 import SiteNavigation from './SiteNavigation';
 
 export default function PortfolioHome() {
   return (
     <main>
+      <PortfolioEffects />
       <header className="site-header">
         <div className="site-shell site-nav">
           <a
@@ -59,7 +61,7 @@ export default function PortfolioHome() {
         </div>
       </section>
 
-      <section className="home-work section-rule" id="work">
+      <section className="home-work section-rule motion-line" id="work">
         <div className="site-shell">
           <div className="home-section-head">
             <div>
@@ -166,7 +168,7 @@ export default function PortfolioHome() {
       </section>
 
       <ContributionRevealSection
-        className="home-contribution section-rule"
+        className="home-contribution section-rule motion-line"
         id="contribution"
       >
         <div className="site-shell">
@@ -176,7 +178,9 @@ export default function PortfolioHome() {
               <h2>Vad jag bidrar med</h2>
             </div>
             <p>
-              Design som håller ihop helheten, med ett skarpt öga för detaljer.
+              Design som håller ihop helheten,
+              <br />
+              med ett skarpt öga för detaljer.
             </p>
           </div>
 
@@ -209,7 +213,7 @@ export default function PortfolioHome() {
         </div>
       </ContributionRevealSection>
 
-      <section className="home-about section-rule" id="about">
+      <section className="home-about section-rule motion-line" id="about">
         <div className="site-shell">
           <div className="about-grid">
             <div className="about-copy">
@@ -305,7 +309,7 @@ export default function PortfolioHome() {
         </div>
       </section>
 
-      <section className="home-lia section-rule" id="lia">
+      <section className="home-lia section-rule motion-line" id="lia">
         <div className="site-shell lia-grid">
           <div>
             <p className="eyebrow">Nästa kapitel</p>

@@ -33,10 +33,7 @@ export default function ContributionRevealSection({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting) return;
-
-        section.classList.add('is-revealed');
-        observer.unobserve(section);
+        section.classList.toggle('is-revealed', entry.isIntersecting);
       },
       {
         rootMargin: '0px 0px -12% 0px',
