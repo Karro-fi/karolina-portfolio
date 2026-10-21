@@ -91,8 +91,34 @@ img {
 }
 
 .wordmark {
+  position: relative;
+  padding-block: var(--space-1);
   font-size: 1rem;
   letter-spacing: -0.025em;
+  transition: color 180ms ease;
+}
+
+.wordmark::after {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  left: 0;
+  height: 1px;
+  background: var(--accent);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.wordmark:hover,
+.wordmark:focus-visible {
+  color: var(--accent);
+}
+
+.wordmark:hover::after,
+.wordmark:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .desktop-nav {
@@ -137,8 +163,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: var(--space-3);
   margin-bottom: var(--space-6);
+}
+
+.case-context {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
 }
 
 .eyebrow,
@@ -2099,7 +2132,13 @@ h3 {
   }
 
   .eyebrow-row {
+    align-items: flex-start;
     margin-bottom: var(--space-4);
+  }
+
+  .case-context {
+    justify-content: flex-start;
+    gap: var(--space-2);
   }
 
   .hero-intro {

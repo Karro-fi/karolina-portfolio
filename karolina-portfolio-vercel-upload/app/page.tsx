@@ -65,17 +65,17 @@ export default function PortfolioHome() {
         <div className="site-shell">
           <div className="home-section-head">
             <div>
-              <p className="eyebrow">Avslutade arbeten</p>
+              <p className="eyebrow">Utvalda projekt</p>
               <h2>Projekt</h2>
             </div>
-            <p>04 / 04</p>
+            <p>3 publicerade · 1 kommande</p>
           </div>
 
           <div className="project-card-grid">
             <a
               className="case-card"
               href="/case/academedia"
-              aria-label="Läs AcadeMedia Academy case study"
+              aria-label="Läs projektet AcadeMedia Academy"
             >
               <div className="case-card-media case-card-media--academedia">
                 <img
@@ -84,14 +84,14 @@ export default function PortfolioHome() {
                 />
               </div>
               <div className="case-card-copy">
-                <p className="eyebrow">UX/UI · Accessibility · 2026 Q2</p>
+                <p className="eyebrow">UX/UI · Tillgänglighet · 2026 Q2</p>
                 <h3>En tydligare väg genom lärandet.</h3>
                 <p>
                   En personcentrerad redesign av AcadeMedia Academy som minskar
                   informationsöverflöd och gör nästa steg lättare att förstå.
                 </p>
                 <span>
-                  Läs case study <span aria-hidden="true">↗</span>
+                  Läs projektet <span aria-hidden="true">↗</span>
                 </span>
               </div>
             </a>
@@ -99,7 +99,7 @@ export default function PortfolioHome() {
             <a
               className="case-card"
               href="/case/kommunal"
-              aria-label="Läs Kommunal Måendestöd case study"
+              aria-label="Läs projektet Kommunal Måendestöd"
             >
               <div className="case-card-media case-card-media--kommunal">
                 <img
@@ -109,14 +109,14 @@ export default function PortfolioHome() {
                 />
               </div>
               <div className="case-card-copy">
-                <p className="eyebrow">UI design · Prototyping · 2025 Q2</p>
+                <p className="eyebrow">UI-design · Prototyp · 2025 Q2</p>
                 <h3>Kommunal Måendestöd</h3>
                 <p>
                   Ett lugnare självskattningsflöde som gör resultat och nästa
                   steg lättare att förstå.
                 </p>
                 <span>
-                  Läs case study <span aria-hidden="true">↗</span>
+                  Läs projektet <span aria-hidden="true">↗</span>
                 </span>
               </div>
             </a>
@@ -124,7 +124,7 @@ export default function PortfolioHome() {
             <a
               className="case-card"
               href="/case/duro"
-              aria-label="Läs Duro Sweden case study"
+              aria-label="Läs projektet Duro Sweden"
             >
               <div className="case-card-media case-card-media--duro">
                 <img
@@ -141,7 +141,7 @@ export default function PortfolioHome() {
                   väg genom sortimentet.
                 </p>
                 <span>
-                  Läs case study <span aria-hidden="true">↗</span>
+                  Läs projektet <span aria-hidden="true">↗</span>
                 </span>
               </div>
             </a>
@@ -159,7 +159,7 @@ export default function PortfolioHome() {
               <div className="case-card-copy">
                 <p className="eyebrow">UX · 2026 Q4</p>
                 <h3>Le Keramik</h3>
-                <p>Information om detta projekt kommer inom kort.</p>
+                <p>Case study publiceras när projektet är redo att visas.</p>
                 <span>Kommande</span>
               </div>
             </article>
@@ -189,8 +189,8 @@ export default function PortfolioHome() {
               <span>01</span>
               <h3>Designgrunder</h3>
               <p>
-                Färsk kunskap och ett perspektiv grundat i goda designprinciper,
-                användarcentrerad design och tillgänglighet.
+                Ett perspektiv grundat i designprinciper, användarcentrerade
+                metoder och tillgänglighet.
               </p>
             </article>
             <article>
@@ -221,18 +221,14 @@ export default function PortfolioHome() {
               <h2>Nyfiken på detaljerna som gör skillnad.</h2>
               <p>
                 Jag heter Karolina och studerar Experience Design på
-                Futuregames. Jag är nyfiken på hur form, innehåll och teknik kan
-                samspela för att skapa tydliga och engagerande upplevelser. Med
-                ett skarpt öga för detaljer arbetar jag strukturerat och
-                kreativt, med både mottagaren och helheten i fokus.
+                Futuregames. Jag trivs i skärningspunkten mellan visuell form,
+                användarflöden och stark kommunikation.
               </p>
               <p>
-                Mitt fokus ligger i skärningspunkten mellan visuell form, smarta
-                flöden och stark kommunikation. Jag tycker om att utveckla idéer
-                från första koncept till färdigt uttryck och rör mig obehindrat
-                mellan research, design, bild, rörligt innehåll och digitala
-                verktyg. Oavsett format vill jag skapa lösningar som känns
-                relevanta, genomtänkta och lätta att ta till sig.
+                Jag arbetar strukturerat från research och koncept till färdig
+                design, med mottagaren och helheten i fokus. Oavsett format vill
+                jag skapa lösningar som känns relevanta, genomtänkta och lätta
+                att ta till sig.
               </p>
             </div>
 
@@ -270,16 +266,16 @@ export default function PortfolioHome() {
               <ul className="expertise-list">
                 {[
                   'UX/UI',
-                  'UX Research',
-                  'User testing',
-                  'Gamification',
-                  'Agil projektmetodik',
-                  'Service design',
+                  'Användarresearch',
+                  'Användartester',
+                  'Spelifiering',
+                  'Agila arbetssätt',
+                  'Tjänstedesign',
                   'Speldesign',
                   'Interaktionsdesign',
                   'Tillgänglighet',
                   'Generativ AI',
-                  'Vibe / flow coding',
+                  'AI-assisterad prototypning',
                   'Videoredigering',
                   'Fotografi',
                 ].map((item) => (
