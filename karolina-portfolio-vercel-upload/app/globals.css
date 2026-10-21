@@ -239,7 +239,7 @@ h1 {
 
 .hero-visual {
   margin: 0;
-  padding: var(--space-3);
+  padding: var(--space-3) var(--space-3) 0;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -264,7 +264,7 @@ h1 {
 .browser-bar .browser-label {
   margin-left: var(--space-2);
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: clamp(var(--type-small), 1vw, 1rem);
 }
 
 .hero-image-window {
@@ -281,7 +281,10 @@ h1 {
 
 .hero-visual figcaption {
   max-width: 720px;
-  padding: var(--space-2) var(--space-2) 0;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-2);
   color: var(--muted);
   font-size: var(--type-small);
 }
@@ -321,7 +324,7 @@ h1 {
   }
 
   .hero-visual {
-    padding: var(--space-2);
+    padding: var(--space-2) var(--space-2) 0;
     border-radius: var(--radius-md);
   }
 
@@ -1266,9 +1269,15 @@ h3 {
 }
 
 .stat-strip span {
-  max-width: 240px;
+  max-width: none;
   color: var(--muted);
   font-size: var(--type-body);
+}
+
+@media (min-width: 901px) {
+  .stat-strip span {
+    white-space: nowrap;
+  }
 }
 
 .audience-compact {
@@ -1404,7 +1413,7 @@ h3 {
   font-family: var(--font-sora), sans-serif;
 }
 
-.contribution-marker span {
+.contribution-marker > span {
   display: block;
   margin-bottom: var(--space-3);
   color: var(--accent);
@@ -1416,12 +1425,21 @@ h3 {
 
 .contribution-marker strong {
   display: block;
-  max-width: 360px;
+  max-width: 460px;
   color: var(--foreground);
   font-size: clamp(1.5rem, 2.2vw, 2.75rem);
   font-weight: 500;
   letter-spacing: -0.035em;
   line-height: 1.15;
+}
+
+.contribution-marker strong .heading-line {
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-transform: none;
 }
 
 .contribution-copy {
@@ -1478,6 +1496,10 @@ h3 {
   color: var(--muted);
 }
 
+.tipsar-copy-prose {
+  color: var(--muted);
+}
+
 .component-facts {
   margin: var(--space-6) 0 0;
   border-top: 1px solid var(--line);
@@ -1508,7 +1530,7 @@ h3 {
 .tipsar-visual {
   grid-column: 6 / -1;
   margin: 0;
-  padding: var(--space-2);
+  padding: var(--space-2) var(--space-2) 0;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -1522,7 +1544,10 @@ h3 {
 }
 
 .tipsar-visual figcaption {
-  padding: var(--space-2) var(--space-2) 0;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-2);
   color: var(--muted);
   font-size: var(--type-small);
 }
@@ -1535,7 +1560,7 @@ h3 {
 }
 
 .process-grid article {
-  min-height: 384px;
+  min-height: 336px;
   display: grid;
   grid-template-rows: auto minmax(2.4em, auto) 1fr;
   align-content: start;
@@ -1620,7 +1645,7 @@ h3 {
 
 .browser-frame {
   margin: 0;
-  padding: var(--space-2);
+  padding: var(--space-2) var(--space-2) 0;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -1688,13 +1713,21 @@ h3 {
   z-index: 1;
 }
 
-.academedia-case .process-grid article {
-  min-height: 336px;
+.browser-frame figcaption {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-2);
+  color: var(--muted);
+  font-size: var(--type-small);
+  line-height: 1.5;
 }
 
-.browser-frame figcaption,
 .hero-visual figcaption {
-  padding: var(--space-2) var(--space-2) 0;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-2);
   color: var(--muted);
   font-size: var(--type-small);
   line-height: 1.5;
@@ -1738,7 +1771,7 @@ h3 {
 }
 
 .learning-gallery .browser-frame {
-  padding: var(--space-1);
+  padding: var(--space-1) var(--space-1) 0;
   border-radius: var(--radius-md);
   background: var(--background);
   box-shadow: none;
@@ -1746,6 +1779,12 @@ h3 {
 
 .learning-gallery .browser-frame:nth-child(3) {
   width: 72%;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.learning-gallery > .browser-frame:only-child {
+  width: min(100%, 960px);
   grid-column: 1 / -1;
   justify-self: center;
 }
@@ -1794,9 +1833,17 @@ h3 {
   gap: var(--space-4);
 }
 
-.outcome-grid > div:first-child,
-.reflection-grid > div:first-child {
+.outcome-grid > div:first-child {
   grid-column: 1 / span 5;
+}
+
+.reflection-grid > div:first-child {
+  grid-column: 1 / span 6;
+}
+
+.reflection-grid > div:first-child h2 {
+  max-width: 680px;
+  font-size: clamp(2.25rem, 2.8vw, 3.5rem);
 }
 
 .outcome-copy,
@@ -1859,12 +1906,13 @@ h3 {
 }
 
 .footer-contact-copy {
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 6;
 }
 
 .footer-contact-copy h2 {
   margin-top: var(--space-2);
-  font-size: clamp(2.5rem, 4vw, 5rem);
+  font-size: clamp(2.5rem, 3.4vw, 4.25rem);
+  white-space: nowrap;
 }
 
 .footer-contact-copy > p:not(.eyebrow) {
@@ -1968,6 +2016,14 @@ h3 {
   .insight-panel {
     grid-template-columns: 1fr;
   }
+
+  .reflection-grid > div:first-child {
+    grid-column: 1 / span 6;
+  }
+
+  .reflection-copy {
+    grid-column: 7 / -1;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1986,7 +2042,7 @@ h3 {
   .catalog-grid,
   .outcome-grid,
   .reflection-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .audience-compact {
@@ -2018,6 +2074,11 @@ h3 {
 
   .statement-grid .eyebrow {
     padding-top: 0;
+  }
+
+  .stat-strip span,
+  .footer-contact-copy h2 {
+    white-space: normal;
   }
 
   .stat-strip,
@@ -2106,6 +2167,10 @@ h3 {
     position: relative;
   }
 
+  .mobile-nav:not([open]) nav {
+    display: none;
+  }
+
   .mobile-nav[open] nav {
     position: absolute;
     top: calc(100% + 16px);
@@ -2150,7 +2215,23 @@ h3 {
   }
 
   .statement-grid blockquote {
+    min-width: 0;
     font-size: 2rem;
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
+  /* Let editorial display text reflow naturally on narrow screens. */
+  .statement-grid .heading-line,
+  .contribution-copy .heading-line,
+  .insight-panel .heading-line {
+    display: inline;
+  }
+
+  .statement-grid .heading-line + .heading-line::before,
+  .contribution-copy .heading-line + .heading-line::before,
+  .insight-panel .heading-line + .heading-line::before {
+    content: ' ';
   }
 
   .insight-panel {
@@ -2184,7 +2265,7 @@ h3 {
   }
 
   .browser-frame {
-    padding: var(--space-1);
+    padding: var(--space-1) var(--space-1) 0;
     border-radius: var(--radius-md);
   }
 

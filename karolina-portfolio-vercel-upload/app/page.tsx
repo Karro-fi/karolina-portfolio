@@ -55,7 +55,7 @@ export default function PortfolioHome() {
               </a>
             </div>
             <a className="status-pill" href="#lia">
-              Söker LIA · 4/1 till 21/5 2027
+              Söker LIA · 4 jan–21 maj 2027
             </a>
           </div>
         </div>
@@ -84,14 +84,14 @@ export default function PortfolioHome() {
                 />
               </div>
               <div className="case-card-copy">
-                <p className="eyebrow">UX/UI · Tillgänglighet · 2026 Q2</p>
-                <h3>En tydligare väg genom lärandet.</h3>
+                <p className="eyebrow">UX/UI · Lärplattform · 2026 Q2</p>
+                <h3>AcadeMedia Academy</h3>
                 <p>
                   En personcentrerad redesign av AcadeMedia Academy som minskar
                   informationsöverflöd och gör nästa steg lättare att förstå.
                 </p>
                 <span>
-                  Läs projektet <span aria-hidden="true">↗</span>
+                  Läs projektet <span aria-hidden="true">→</span>
                 </span>
               </div>
             </a>
@@ -109,14 +109,14 @@ export default function PortfolioHome() {
                 />
               </div>
               <div className="case-card-copy">
-                <p className="eyebrow">UI-design · Prototyp · 2025 Q2</p>
+                <p className="eyebrow">UX/UI · Självskattning · 2025 Q2</p>
                 <h3>Kommunal Måendestöd</h3>
                 <p>
                   Ett lugnare självskattningsflöde som gör resultat och nästa
                   steg lättare att förstå.
                 </p>
                 <span>
-                  Läs projektet <span aria-hidden="true">↗</span>
+                  Läs projektet <span aria-hidden="true">→</span>
                 </span>
               </div>
             </a>
@@ -135,20 +135,20 @@ export default function PortfolioHome() {
               </div>
               <div className="case-card-copy">
                 <p className="eyebrow">UX/UI · WCAG 2.1 AA · 2026 Q1</p>
-                <h3>Duro Sweden: tillgänglig webbhandel</h3>
+                <h3>Duro Sweden</h3>
                 <p>
                   Tydligare filtrering, bättre kontrast och en mer inkluderande
                   väg genom sortimentet.
                 </p>
                 <span>
-                  Läs projektet <span aria-hidden="true">↗</span>
+                  Läs projektet <span aria-hidden="true">→</span>
                 </span>
               </div>
             </a>
 
             <article
               className="case-card case-card--pending"
-              aria-label="Le Keramik, kommande projekt"
+              aria-label="LE Keramik, kommande projekt"
             >
               <div className="case-card-media pending-card-media">
                 <div>
@@ -158,7 +158,7 @@ export default function PortfolioHome() {
               </div>
               <div className="case-card-copy">
                 <p className="eyebrow">UX · 2026 Q4</p>
-                <h3>Le Keramik</h3>
+                <h3>LE Keramik</h3>
                 <p>Case study publiceras när projektet är redo att visas.</p>
                 <span>Kommande</span>
               </div>
@@ -178,9 +178,8 @@ export default function PortfolioHome() {
               <h2>Vad jag bidrar med</h2>
             </div>
             <p>
-              Design som håller ihop helheten,
-              <br />
-              med ett skarpt öga för detaljer.
+              <span className="heading-line">Design som håller ihop helheten,</span>
+              <span className="heading-line">med ett skarpt öga för detaljer.</span>
             </p>
           </div>
 
@@ -317,7 +316,7 @@ export default function PortfolioHome() {
               förstå både användare, team och produkt.
             </p>
             <p className="lia-period">
-              <span>Period</span> 4/1 till 21/5 2027
+              <span>Period</span> 4 jan–21 maj 2027
             </p>
           </div>
         </div>
