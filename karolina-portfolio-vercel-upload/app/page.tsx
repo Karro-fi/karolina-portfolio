@@ -275,7 +275,7 @@ export default function PortfolioHome() {
               </div>
 
               <div className="expertise-cluster">
-                <p className="expertise-label">Metoder &amp; kompletterande erfarenhet</p>
+                <p className="expertise-label">Kompletterande kompetenser</p>
                 <ul className="expertise-list expertise-list-secondary">
                 {[
                   'Spelifiering',

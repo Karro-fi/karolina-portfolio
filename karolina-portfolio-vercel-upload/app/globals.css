@@ -888,11 +888,12 @@ h1 {
 
 .expertise-label {
   margin: 0 0 var(--space-2);
-  color: var(--muted);
+  color: var(--foreground);
   font-family: var(--font-sora), sans-serif;
-  font-size: 0.75rem;
+  font-size: var(--type-body);
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
 }
 
 .expertise-list {
@@ -920,7 +921,7 @@ h1 {
 }
 
 .expertise-list-secondary li {
-  color: var(--muted);
+  color: color-mix(in srgb, var(--foreground) 78%, var(--muted));
 }
 
 .expertise-list-tools {
