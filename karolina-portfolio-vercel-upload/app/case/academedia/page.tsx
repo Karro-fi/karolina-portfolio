@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import CaseProgress from '../../CaseProgress';
 import SiteFooter from '../../SiteFooter';
 import SiteNavigation from '../../SiteNavigation';
 
@@ -106,6 +107,7 @@ export default function Home() {
             ]}
           />
         </div>
+        <CaseProgress />
       </header>
 
       <section className="hero" id="top">
