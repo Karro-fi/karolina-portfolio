@@ -2010,14 +2010,14 @@ h3 {
   transition:
     color 180ms ease,
     background-color 180ms ease,
-    padding-inline 220ms cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow 180ms ease;
 }
 
 .footer-contact-links a:hover,
 .footer-contact-links a:focus-visible {
   color: var(--accent);
   background: color-mix(in srgb, var(--accent) 4%, transparent);
-  padding-inline: var(--space-2);
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--accent) 56%, transparent);
 }
 
 .footer-contact-links a > span:first-child {
