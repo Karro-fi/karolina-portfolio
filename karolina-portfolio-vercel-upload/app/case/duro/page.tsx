@@ -46,14 +46,14 @@ export default function DuroCase() {
       problemTitle="Filtrering som skapade friktion"
       problemText="En statisk sidomeny med låg kontrast, begränsade flerval och otydliga tillstånd gjorde det svårt att avgränsa ett stort sortiment och förstå vad som var valt."
       solutionTitle="En fokuserad och tillgänglig filtermeny"
-      solutionText="En popupmeny med tydliga kategorier, checkboxar, färgsymboler, alfabetisk sortering och handlingar som fungerar för både mus, tangentbord och mindre skärmar."
+      solutionText="En popupmeny med tydliga kategorier, kryssrutor, färgsymboler, alfabetisk sortering och handlingar som fungerar för både mus, tangentbord och mindre skärmar."
       contributionTitle="Jag omsatte granskning och testdata till designbeslut."
       contributionIntro="Jag hade en drivande designroll och samarbetade nära med en teammedlem i Figma för att bygga och kvalitetssäkra prototyperna."
       contributionItems={[
-        'Byggde komponenter, states och prototypflöden i Figma.',
+        'Byggde komponenter, tillstånd och prototypflöden i Figma.',
         'Sorterade färger och mönster alfabetiskt för lägre kognitiv belastning.',
         'Genomförde användartester som både observatör och testledare.',
-        'Översatte auditresultat och användarinsikter till konkreta designbeslut.',
+        'Översatte granskningsresultat och användarinsikter till konkreta designbeslut.',
         'Strukturerade presentation och manus för en tydlig kundleverans.',
       ]}
       contributionImage={{
