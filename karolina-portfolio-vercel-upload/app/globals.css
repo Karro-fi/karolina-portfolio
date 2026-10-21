@@ -726,7 +726,6 @@ h1 {
     var(--reveal-delay);
 }
 
-.home-contribution.reveal-ready .value-grid article > span,
 .home-contribution.reveal-ready .value-grid article > h3,
 .home-contribution.reveal-ready .value-grid article > p {
   opacity: 0;
@@ -736,36 +735,22 @@ h1 {
     transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.home-contribution.reveal-ready .value-grid article > span {
+.home-contribution.reveal-ready .value-grid article > h3 {
   transition-delay: calc(var(--reveal-delay) + 100ms);
 }
 
-.home-contribution.reveal-ready .value-grid article > h3 {
-  transition-delay: calc(var(--reveal-delay) + 170ms);
-}
-
 .home-contribution.reveal-ready .value-grid article > p {
-  transition-delay: calc(var(--reveal-delay) + 240ms);
+  transition-delay: calc(var(--reveal-delay) + 170ms);
 }
 
 .home-contribution.reveal-ready.is-revealed .value-grid article::before {
   transform: scaleX(1);
 }
 
-.home-contribution.reveal-ready.is-revealed .value-grid article > span,
 .home-contribution.reveal-ready.is-revealed .value-grid article > h3,
 .home-contribution.reveal-ready.is-revealed .value-grid article > p {
   opacity: 1;
   transform: translateY(0);
-}
-
-.value-grid article > span {
-  display: block;
-  margin-bottom: var(--space-kicker-title);
-  color: var(--accent);
-  font-family: var(--font-sora), sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600;
 }
 
 .value-grid h3 {
@@ -864,7 +849,7 @@ h1 {
 
 .about-expertise {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(400px, 0.8fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.7fr);
   gap: var(--space-16);
   margin-top: var(--space-12);
   padding-top: var(--space-6);
@@ -873,6 +858,19 @@ h1 {
 
 .expertise-group .eyebrow {
   margin-bottom: var(--space-4);
+}
+
+.expertise-cluster + .expertise-cluster {
+  margin-top: var(--space-5);
+}
+
+.expertise-label {
+  margin: 0 0 var(--space-2);
+  color: var(--muted);
+  font-family: var(--font-sora), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .expertise-list {
@@ -887,15 +885,51 @@ h1 {
 .expertise-list li {
   padding: var(--space-1) var(--space-2);
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: 10px;
   color: var(--foreground);
   font-family: var(--font-sora), sans-serif;
   font-size: var(--type-small);
   line-height: 1.5;
 }
 
+.expertise-list-core li {
+  border-color: color-mix(in srgb, var(--accent) 36%, var(--line));
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+}
+
+.expertise-list-secondary li {
+  color: var(--muted);
+}
+
+.expertise-list-tools {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
 .expertise-list-tools li {
+  position: relative;
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--line);
   color: var(--accent);
+  font-family: var(--font-sora), sans-serif;
+  font-size: var(--type-small);
+}
+
+.expertise-list-tools li::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  content: '';
+  transform: translateY(-50%);
 }
 
 .lia-grid {
@@ -951,10 +985,6 @@ h1 {
   .value-grid {
     grid-template-columns: 1fr;
     gap: var(--space-6);
-  }
-
-  .value-grid article > span {
-    margin-bottom: var(--space-kicker-title);
   }
 
   .value-grid h3 {
@@ -1069,7 +1099,6 @@ h1 {
     transform: scaleX(1);
   }
 
-  .home-contribution.reveal-ready .value-grid article > span,
   .home-contribution.reveal-ready .value-grid article > h3,
   .home-contribution.reveal-ready .value-grid article > p {
     opacity: 1;
@@ -1881,18 +1910,8 @@ h3 {
 }
 
 .outcome-list > div {
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: var(--space-3);
   padding-block: var(--space-3);
   border-top: 1px solid var(--line);
-}
-
-.outcome-list span {
-  color: var(--accent);
-  font-family: var(--font-sora), sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
 }
 
 .outcome-list p {
