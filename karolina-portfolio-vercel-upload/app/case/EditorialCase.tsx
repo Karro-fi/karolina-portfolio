@@ -1,3 +1,4 @@
+import CaseProgress from '../CaseProgress';
 import SiteFooter from '../SiteFooter';
 import SiteNavigation from '../SiteNavigation';
 
@@ -98,6 +99,7 @@ export default function EditorialCase(props: EditorialCaseProps) {
             ]}
           />
         </div>
+        <CaseProgress />
       </header>
 
       <section className="hero" id="top">

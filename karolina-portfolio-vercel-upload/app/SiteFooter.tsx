@@ -1,3 +1,5 @@
+import ContactPanelEffects from './ContactPanelEffects';
+
 type SiteFooterProps = {
   backHref?: string;
   backLabel?: string;
@@ -9,13 +11,15 @@ export default function SiteFooter({
 }: SiteFooterProps) {
   return (
     <footer className="site-footer" id="contact">
+      <ContactPanelEffects />
       <div className="site-shell footer-contact">
         <div className="footer-contact-copy">
-          <p className="eyebrow">Kontakta mig</p>
-          <h2>Hör gärna av dig.</h2>
+          <p className="eyebrow">Kontakt &amp; samarbete</p>
+          <h2>Låt oss prata vidare.</h2>
           <p>
-            Vill du prata UX, visuell gestaltning, LIA eller ett framtida
-            samarbete är du varmt välkommen att kontakta mig.
+            Har du en LIA-plats, ett projekt eller en idé som du vill bolla?
+            Jag tar gärna ett första samtal om UX, visuell gestaltning och
+            digital design.
           </p>
         </div>
 

@@ -32,8 +32,7 @@ export default function PortfolioHome() {
       <section className="portfolio-hero" id="top">
         <div className="site-shell">
           <div className="eyebrow-row">
-            <p className="eyebrow">Experience designer · Karlstad</p>
-            <p className="case-index">Portfolio · 2026</p>
+            <p className="eyebrow">Studerande Experience Designer · Karlstad</p>
           </div>
           <h1
             className="portfolio-hero-title"
@@ -50,8 +49,9 @@ export default function PortfolioHome() {
                 Jag kombinerar design, innehåll och digitala verktyg för att
                 forma genomtänkta uttryck som når fram.
               </p>
-              <a className="text-link" href="#work">
-                Se mina projekt <span aria-hidden="true">↓</span>
+              <a className="text-link text-link-scroll" href="#work">
+                <span>Se mina projekt</span>
+                <span className="text-link-arrow" aria-hidden="true">↓</span>
               </a>
             </div>
             <a className="status-pill" href="#lia">
@@ -185,7 +185,6 @@ export default function PortfolioHome() {
 
           <div className="value-grid">
             <article>
-              <span>01</span>
               <h3>Designgrunder</h3>
               <p>
                 Ett perspektiv grundat i designprinciper, användarcentrerade
@@ -193,7 +192,6 @@ export default function PortfolioHome() {
               </p>
             </article>
             <article>
-              <span>02</span>
               <h3>UI och visuell gestaltning</h3>
               <p>
                 Ett särskilt intresse för hur visuell estetik, typografi och
@@ -201,7 +199,6 @@ export default function PortfolioHome() {
               </p>
             </article>
             <article>
-              <span>03</span>
               <h3>Videoproduktion</h3>
               <p>
                 En passion för rörligt berättande och redigering i CapCut, från
@@ -260,19 +257,31 @@ export default function PortfolioHome() {
           </div>
 
           <div className="about-expertise" aria-label="Kompetenser och verktyg">
-            <div className="expertise-group">
+            <div className="expertise-group expertise-group-skills">
               <p className="eyebrow">Kompetens</p>
-              <ul className="expertise-list">
+              <div className="expertise-cluster expertise-cluster-core">
+                <p className="expertise-label">Kärnkompetenser</p>
+                <ul className="expertise-list expertise-list-core">
+                  {[
+                    'UX/UI',
+                    'Användarresearch',
+                    'Användartester',
+                    'Interaktionsdesign',
+                    'Tillgänglighet',
+                  ].map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="expertise-cluster">
+                <p className="expertise-label">Metoder &amp; kompletterande erfarenhet</p>
+                <ul className="expertise-list expertise-list-secondary">
                 {[
-                  'UX/UI',
-                  'Användarresearch',
-                  'Användartester',
                   'Spelifiering',
                   'Agila arbetssätt',
                   'Tjänstedesign',
                   'Speldesign',
-                  'Interaktionsdesign',
-                  'Tillgänglighet',
                   'Generativ AI',
                   'AI-assisterad prototypning',
                   'Videoredigering',
@@ -280,12 +289,14 @@ export default function PortfolioHome() {
                 ].map((item) => (
                   <li key={item}>{item}</li>
                 ))}
-              </ul>
+                </ul>
+              </div>
             </div>
 
-            <div className="expertise-group">
+            <div className="expertise-group expertise-group-tools">
               <p className="eyebrow">Verktyg</p>
-              <ul className="expertise-list expertise-list-tools">
+              <p className="expertise-label">Verktyg jag arbetar i</p>
+              <ul className="expertise-list-tools">
                 {[
                   'Figma',
                   'Google Gemini',
