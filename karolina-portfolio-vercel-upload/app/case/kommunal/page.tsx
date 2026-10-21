@@ -4,16 +4,16 @@ import EditorialCase from '../EditorialCase';
 export const metadata: Metadata = {
   title: 'Kommunal Måendestöd',
   description:
-    'En UX/UI case study om ett lugnare och mer tillgängligt digitalt måendestöd för Kommunals medlemmar.',
+    'Ett UX/UI-case om ett lugnare och mer tillgängligt digitalt måendestöd för Kommunals medlemmar.',
   openGraph: {
     title: 'Kommunal Måendestöd',
-    description: 'UI design · Kognitiv ergonomi · Prototyping',
+    description: 'UI-design · Kognitiv ergonomi · Prototyp',
     images: [{ url: '/images/kommunal-overview.png', alt: 'Kommunal Måendestöd före och efter redesign.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Kommunal Måendestöd',
-    description: 'UI design · Kognitiv ergonomi · Prototyping',
+    description: 'UI-design · Kognitiv ergonomi · Prototyp',
     images: ['/images/kommunal-overview.png'],
   },
 };
@@ -22,6 +22,7 @@ export default function KommunalCase() {
   return (
     <EditorialCase
       period="2025 Q2"
+      readingTime="4 min"
       eyebrow="Case study · UI design & prototyping"
       title="Kommunal Måendestöd"
       intro="En vidareutveckling av ett digitalt måendestöd för Kommunals medlemmar med fokus på lägre kognitiv belastning, tydligare självskattning och mer begripliga resultat."
@@ -41,20 +42,23 @@ export default function KommunalCase() {
         'Funktionen Mitt mående låg dold i en undermeny och mötte användaren med en svag visuell hierarki. För en redan stressad målgrupp blev vägen till stöd mer krävande än den behövde vara.',
         'Självskattningen gav liten återkoppling om progression, och resultatöversiktens linjediagram var svårt att läsa. Utmaningen var att minska brus utan att förenkla bort viktig information.',
       ]}
-      designQuestion="Hur kan vi göra ett känsligt självskattningsflöde lättare att hitta, förstå och fullfölja?"
-      focusAreas={['UI design', 'Kognitiv ergonomi', 'Designsystem', 'Prototyping']}
-      problemTitle="Hög minnesbörda och otydlig återkoppling"
+      designQuestion={[
+        'Hur kan ett känsligt självskattningsflöde',
+        'bli lättare att hitta, förstå och fullfölja?',
+      ]}
       problemText="Binära svar, symboler utan förklaring och ett svårtolkat linjediagram gjorde tjänsten svår att skanna och gav användaren begränsad kontroll över flödet."
       solutionTitle="Ett lugnare och mer vägledande flöde"
       solutionText="En stegvis självskattning med tydlig status, igenkännbara kategorier och en resultatvy som översätter komplex data till direkt visuell återkoppling."
-      contributionTitle="Jag formgav ett tydligare självskattningsflöde."
+      contributionTitle={[
+        'Jag formgav ett tydligare',
+        'självskattningsflöde.',
+      ]}
       contributionIntro="Jag kvalitetssäkrade användarresan och tog ett särskilt ansvar för självskattningsformuläret, från visuell struktur till interaktionsdetaljer."
       contributionItems={[
         'Formgav självskattningen med en skala från 1 till 5 och tre tydliga interaktionslägen.',
         'Införde stepper och vertikal progressionslinje för synlig systemstatus.',
         'Skapade större träffytor, konsekvent pilnavigation och hovringslägen.',
         'Gjorde om resultatvyn från linjediagram till staplar med en grön mållinje.',
-        'Byggde återanvändbara komponenter för knappar, kort och states.',
       ]}
       contributionImage={{
         src: '/images/kommunal-self-assessment.png',
@@ -66,24 +70,18 @@ export default function KommunalCase() {
       processSteps={[
         {
           number: '01',
-          title: 'Research & analys',
+          title: 'Insikter & analys',
           text: 'Vi återvände till tidigare testresultat och ringade in tre huvudproblem: funktionen var dold, självskattningen saknade vägledning och resultatet krävde för mycket tolkning.',
         },
         {
           number: '02',
           title: 'Formulär & interaktion',
           text: 'Vi itererade ett lugnare frågeflöde med mer luft, stegindikator, kategoribilder och en skala som gav mer nyanserad återkoppling än ja eller nej.',
-          image: '/images/kommunal-self-assessment.png',
-          imageAlt: 'Jämförelse före och efter av självskattningsformuläret.',
-          caption: 'Den nya versionen gör progression, kategori och nästa handling synliga samtidigt.',
         },
         {
           number: '03',
           title: 'Resultatöversikt',
           text: 'Linjen byttes mot staplar, kategorierna fick en konsekvent vertikal struktur och en mållinje lades till för att ge omedelbar feedback.',
-          image: '/images/kommunal-results.png',
-          imageAlt: 'Jämförelse före och efter av resultatöversikten.',
-          caption: 'Resultatet blir lättare att skanna och knyts visuellt till samma kategorier som formuläret.',
         },
       ]}
       galleryTitle="Ett sammanhållet stöd för reflektion."
@@ -109,7 +107,7 @@ export default function KommunalCase() {
       reflectionTitle="Systematik förstärker omsorgen i designen."
       reflectionText={[
         'Arbetet visade hur små beslut kring avstånd, komponenter och återkoppling kan förändra känslan i ett känsligt flöde. Den stora vinsten var inte fler funktioner, utan en lugnare relation mellan dem.',
-        'Nästa gång skulle jag definiera typografi, spacing och auto layout tidigare. Det hade minskat manuellt merarbete och gjort iterationerna snabbare att kvalitetssäkra.',
+        'Nästa gång skulle jag definiera typografi, avstånd och autolayout tidigare. Det hade minskat manuellt merarbete och gjort iterationerna snabbare att kvalitetssäkra.',
       ]}
       quote="Det bidrag som jag är mest stolt över är utformningen av självskattningsformuläret."
       nextHref="/case/duro"
