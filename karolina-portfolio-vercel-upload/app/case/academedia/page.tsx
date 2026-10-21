@@ -431,10 +431,10 @@ export default function Home() {
               filter och informationshierarki gjorde katalogen lättare att använda.
             </p>
             <div className="outcome-list">
-              <div><span>01</span><p>Personliga rekommendationer minskar irrelevant innehåll.</p></div>
-              <div><span>02</span><p>Synlig kursstatus gör nästa handling tydlig.</p></div>
-              <div><span>03</span><p>Filter och konsekventa mönster stärker orientering och kontroll.</p></div>
-              <div><span>04</span><p>Stöd, tydliga tomlägen och återkoppling är naturliga nästa steg.</p></div>
+              <div><p>Personliga rekommendationer minskar irrelevant innehåll.</p></div>
+              <div><p>Synlig kursstatus gör nästa handling tydlig.</p></div>
+              <div><p>Filter och konsekventa mönster stärker orientering och kontroll.</p></div>
+              <div><p>Stöd, tydliga tomlägen och återkoppling är naturliga nästa steg.</p></div>
             </div>
           </div>
         </div>
