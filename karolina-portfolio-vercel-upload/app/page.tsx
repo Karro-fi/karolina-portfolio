@@ -32,7 +32,7 @@ export default function PortfolioHome() {
       <section className="portfolio-hero" id="top">
         <div className="site-shell">
           <div className="eyebrow-row">
-            <p className="eyebrow">Experience designer · Karlstad</p>
+            <p className="eyebrow">Studerande Experience Designer · Karlstad</p>
             <p className="case-index">Portfolio · 2026</p>
           </div>
           <h1
