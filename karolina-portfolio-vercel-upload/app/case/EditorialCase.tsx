@@ -261,7 +261,9 @@ export default function EditorialCase(props: EditorialCaseProps) {
             <h2>{props.reflectionTitle}</h2>
           </div>
           <div className="reflection-copy">
-            <p>{props.reflectionText[0]}</p>
+            {props.reflectionText.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
             <blockquote>”{props.quote}”</blockquote>
           </div>
         </div>
