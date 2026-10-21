@@ -88,7 +88,7 @@ function BrowserFrame({
 
 export default function Home() {
   return (
-    <main className="academedia-case">
+    <main className="case-page academedia-case">
       <header className="site-header">
         <div className="site-shell site-nav">
           <a className="wordmark" href="/" aria-label="Karolina Paraskevas, startsida">
@@ -198,7 +198,10 @@ export default function Home() {
         <div className="site-shell audience-compact" aria-label="Projektets målgrupper">
           <div>
             <p className="eyebrow">Målgrupp</p>
-            <h3>Tre roller. Två gemensamma behov.</h3>
+            <h3>
+              <span className="heading-line">Tre roller.</span>
+              <span className="heading-line">Två gemensamma behov.</span>
+            </h3>
             <p>
               Hitta relevant innehåll och förstå nästa steg, oavsett roll eller verksamhet.
             </p>
@@ -293,7 +296,10 @@ export default function Home() {
           <div className="insight-panel">
             <div>
               <p className="eyebrow">Tidigt användbarhetstest</p>
-              <h3>Det personliga var rätt. Prioriteringen behövde bli skarpare.</h3>
+              <h3>
+                <span className="heading-line">Det personliga var rätt.</span>
+                <span className="heading-line">Prioriteringen behövde bli skarpare.</span>
+              </h3>
             </div>
             <div className="insight-columns">
               <div>
