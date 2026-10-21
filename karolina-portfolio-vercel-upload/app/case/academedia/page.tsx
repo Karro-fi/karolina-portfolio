@@ -3,7 +3,7 @@ import SiteFooter from '../../SiteFooter';
 import SiteNavigation from '../../SiteNavigation';
 
 export const metadata: Metadata = {
-  title: 'AcadeMedia Academy: Case study',
+  title: 'AcadeMedia Academy · UX/UI-case',
   description:
     'Ett UX/UI-case om hur AcadeMedia Academy omformades för tydligare navigation, personliga rekommendationer och lägre kognitiv belastning.',
   openGraph: {
@@ -98,7 +98,7 @@ export default function Home() {
             initialHref="#case"
             items={[
               { href: '/', label: 'Alla projekt' },
-              { href: '#case', label: 'Case study' },
+              { href: '#case', label: 'Översikt' },
               { href: '#process', label: 'Process' },
               { href: '#solution', label: 'Lösning' },
               { href: '#reflection', label: 'Reflektion' },
@@ -111,7 +111,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="site-shell">
           <div className="eyebrow-row">
-            <p className="eyebrow">Case study · Experience design</p>
+            <p className="eyebrow">UX/UI-case · Lärplattform</p>
             <div className="case-context" aria-label="Projektinformation">
               <p className="case-index">Lästid · 6 min</p>
             </div>
@@ -220,7 +220,8 @@ export default function Home() {
         <div className="site-shell statement-grid">
           <p className="eyebrow">Designfråga</p>
           <blockquote>
-            <span className="heading-line">Hur kan vi skapa en dashboard och katalog</span>
+            <span className="heading-line">Hur kan vi skapa en tydlig</span>
+            <span className="heading-line">dashboard och utbildningskatalog</span>
             <span className="heading-line">som visar rollrelevanta utbildningar,</span>
             <span className="heading-line">motiverar genom synliga framsteg</span>
             <span className="heading-line">och gör nästa steg självklart?</span>
@@ -245,10 +246,10 @@ export default function Home() {
               visuella flöde och strukturen i teamets arbetsfiler.
             </p>
             <ul className="contribution-list">
-              <li>Drev den interaktiva prototypen i Figma framåt.</li>
-              <li>Strukturerade planering, komponenter och lager i FigJam och Figma.</li>
+              <li>Byggde och samordnade den klickbara prototypen i Figma.</li>
+              <li>Strukturerade komponenter, lager och arbetsflöde i FigJam och Figma.</li>
               <li>Formgav ”AcadeMedia tipsar” som en tydlig, navigerbar karusell.</li>
-              <li>Byggde hovringslägen och mikrointeraktioner för utbildningskorten.</li>
+              <li>Definierade hovrings- och återkopplingslägen för utbildningskorten.</li>
             </ul>
           </div>
         </div>
@@ -259,11 +260,16 @@ export default function Home() {
           <div className="tipsar-copy">
             <p className="eyebrow">Mitt komponentansvar</p>
             <h2>AcadeMedia tipsar</h2>
-            <p className="prose-large">
-              Jag formgav karusellen från kortstruktur och visuell hierarki till navigation,
-              hovringslägen och återkoppling. Den hjälper användaren att upptäcka relevanta
-              utbildningar utan att tappa sammanhanget.
-            </p>
+            <div className="prose-large tipsar-copy-prose">
+              <p>
+                Jag formgav karusellen från kortstruktur och visuell hierarki till navigation,
+                hovringslägen och återkoppling.
+              </p>
+              <p>
+                Den hjälper användaren att upptäcka relevanta utbildningar utan att tappa
+                sammanhanget.
+              </p>
+            </div>
             <dl className="component-facts" aria-label="Mitt ansvar för komponenten">
               <div><dt>Ansvar</dt><dd>Komponentdesign och prototyp</dd></div>
               <div><dt>Fokus</dt><dd>Tydlig navigation och igenkänning</dd></div>
@@ -287,7 +293,7 @@ export default function Home() {
         <div className="site-shell">
           <div className="section-heading">
             <p className="eyebrow">Process</p>
-            <h2>Från research till en validerad riktning.</h2>
+            <h2>Från insikter till en validerad riktning.</h2>
           </div>
 
           <div className="process-grid">
@@ -459,10 +465,10 @@ export default function Home() {
       <a className="next-case" href="/case/kommunal">
         <span>Nästa case</span>
         <strong>Kommunal Måendestöd</strong>
-        <span aria-hidden="true">↗</span>
+        <span aria-hidden="true">→</span>
       </a>
 
-      <SiteFooter backHref="/" backLabel="Till portfolion ↗" />
+      <SiteFooter backHref="/" backLabel="← Till portfolion" />
     </main>
   );
 }
