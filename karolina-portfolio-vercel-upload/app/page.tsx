@@ -33,7 +33,6 @@ export default function PortfolioHome() {
         <div className="site-shell">
           <div className="eyebrow-row">
             <p className="eyebrow">Studerande Experience Designer · Karlstad</p>
-            <p className="case-index">Portfolio · 2026</p>
           </div>
           <h1
             className="portfolio-hero-title"
@@ -50,8 +49,9 @@ export default function PortfolioHome() {
                 Jag kombinerar design, innehåll och digitala verktyg för att
                 forma genomtänkta uttryck som når fram.
               </p>
-              <a className="text-link" href="#work">
-                Se mina projekt <span aria-hidden="true">↓</span>
+              <a className="text-link text-link-scroll" href="#work">
+                <span>Se mina projekt</span>
+                <span className="text-link-arrow" aria-hidden="true">↓</span>
               </a>
             </div>
             <a className="status-pill" href="#lia">
