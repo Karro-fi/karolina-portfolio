@@ -85,7 +85,7 @@ function BrowserFrame({
 
 export default function EditorialCase(props: EditorialCaseProps) {
   return (
-    <main>
+    <main className="case-page editorial-case">
       <header className="site-header">
         <div className="site-shell site-nav">
           <a className="wordmark" href="/" aria-label="Karolina Paraskevas, startsida">
