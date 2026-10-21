@@ -17,10 +17,16 @@ export default function PortfolioEffects() {
     root.classList.add('motion-enhanced');
 
     if (reducedMotion) {
+      hero?.style.setProperty('--hero-glow-opacity', '1');
+      hero?.classList.add('is-glow-active');
       lineSections.forEach((section) =>
         section.classList.add('is-line-revealed'),
       );
-      return () => root.classList.remove('motion-enhanced');
+      return () => {
+        root.classList.remove('motion-enhanced');
+        hero?.classList.remove('is-glow-active');
+        hero?.style.removeProperty('--hero-glow-opacity');
+      };
     }
 
     const lineObserver = new IntersectionObserver(
@@ -51,28 +57,55 @@ export default function PortfolioEffects() {
     );
     let frame = 0;
 
+    const showGlow = () => hero?.classList.add('is-glow-active');
+    const hideGlow = () => {
+      hero?.classList.remove('is-glow-active');
+      hero?.style.setProperty('--hero-glow-opacity', '0');
+    };
+
     const handlePointerMove = (event: PointerEvent) => {
       if (!hero || !finePointer.matches) return;
 
+      showGlow();
       window.cancelAnimationFrame(frame);
       frame = window.requestAnimationFrame(() => {
         const rect = hero.getBoundingClientRect();
         const x = ((event.clientX - rect.left) / rect.width) * 100;
         const y = ((event.clientY - rect.top) / rect.height) * 100;
+        const normalizedY = (event.clientY - rect.top) / rect.height;
+        const fadeStart = 0.68;
+        const fadeEnd = 0.92;
+        const opacity = Math.max(
+          0,
+          Math.min(1, (fadeEnd - normalizedY) / (fadeEnd - fadeStart)),
+        );
 
         hero.style.setProperty('--hero-glow-x', `${x.toFixed(2)}%`);
         hero.style.setProperty('--hero-glow-y', `${y.toFixed(2)}%`);
+        hero.style.setProperty('--hero-glow-opacity', opacity.toFixed(3));
       });
     };
 
+    if (!finePointer.matches) {
+      hero?.style.setProperty('--hero-glow-opacity', '1');
+      showGlow();
+    }
+    if (hero?.matches(':hover')) showGlow();
+
+    hero?.addEventListener('pointerenter', showGlow);
     hero?.addEventListener('pointermove', handlePointerMove, { passive: true });
+    hero?.addEventListener('pointerleave', hideGlow);
 
     return () => {
       root.classList.remove('motion-enhanced');
+      hero?.classList.remove('is-glow-active');
+      hero?.style.removeProperty('--hero-glow-opacity');
       lineObserver.disconnect();
       liaObserver.disconnect();
       window.cancelAnimationFrame(frame);
+      hero?.removeEventListener('pointerenter', showGlow);
       hero?.removeEventListener('pointermove', handlePointerMove);
+      hero?.removeEventListener('pointerleave', hideGlow);
     };
   }, []);
 

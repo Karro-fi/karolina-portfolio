@@ -103,8 +103,8 @@ export default function PortfolioHome() {
             >
               <div className="case-card-media case-card-media--kommunal">
                 <img
-                  src="/images/kommunal-overview.png"
-                  alt="Bilder före och efter redesignen av Kommunal Måendestöd."
+                  src="/images/kommunal-mobile.png"
+                  alt="Mobilmockup för Kommunal Måendestöd."
                   loading="lazy"
                 />
               </div>
