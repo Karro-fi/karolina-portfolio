@@ -28,32 +28,17 @@ const processSteps = [
   {
     number: '01',
     title: 'Research & syntes',
-    text: 'Vi analyserade befintliga användarintervjuer, klustrade återkommande hinder och gjorde desk research på jämförbara lärplattformar.',
+    text: 'Vi analyserade befintliga intervjuer, klustrade återkommande hinder och jämförde andra lärplattformar.',
   },
   {
     number: '02',
     title: 'Idégenerering & prototyp',
-    text: 'Teamet tog fram parallella mockups, röstade fram de starkaste riktningarna och kombinerade dem i en gemensam, iterativ prototyp i Figma.',
+    text: 'Teamet tog fram parallella mockups och kombinerade de starkaste riktningarna i en gemensam Figma-prototyp.',
   },
   {
     number: '03',
     title: 'Test & validering',
-    text: 'Ett användbarhetstest och två heuristiska utvärderingar synliggjorde vad som fungerade och vilka delar som behövde tydligare återkoppling.',
-  },
-];
-
-const principles = [
-  {
-    title: 'Igenkänning framför minne',
-    text: 'Rollrelevanta rekommendationer och tydlig kursstatus gör att användaren slipper komma ihåg var innehållet finns.',
-  },
-  {
-    title: 'Förebygg fel',
-    text: 'Fördefinierade filter, synliga val och en tydlig funktion för Rensa filter minskar osäkerhet i sökflödet.',
-  },
-  {
-    title: 'Kontroll & frihet',
-    text: 'Sparade, påbörjade och avslutade utbildningar får egna ytor så att nästa steg alltid går att överblicka.',
+    text: 'Ett användbarhetstest och två heuristiska utvärderingar visade vad som fungerade och vad som behövde tydligare prioritering.',
   },
 ];
 
@@ -64,6 +49,7 @@ function BrowserFrame({
   caption,
   className = '',
   priority = false,
+  expandable = false,
 }: {
   label: string;
   src: string;
@@ -71,6 +57,7 @@ function BrowserFrame({
   caption: string;
   className?: string;
   priority?: boolean;
+  expandable?: boolean;
 }) {
   return (
     <figure className={`browser-frame ${className}`}>
@@ -80,7 +67,20 @@ function BrowserFrame({
         <span />
         <span className="browser-label">{label}</span>
       </div>
-      <img src={src} alt={alt} loading={priority ? 'eager' : 'lazy'} />
+      {expandable ? (
+        <a
+          className="expandable-image"
+          href={src}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Öppna ${label} i full storlek`}
+        >
+          <img src={src} alt={alt} loading={priority ? 'eager' : 'lazy'} />
+          <span>Visa hela vyn ↗</span>
+        </a>
+      ) : (
+        <img src={src} alt={alt} loading={priority ? 'eager' : 'lazy'} />
+      )}
       <figcaption>{caption}</figcaption>
     </figure>
   );
@@ -117,15 +117,15 @@ export default function Home() {
 
           <h1>En tydligare väg genom lärandet.</h1>
           <p className="hero-intro">
-            En personcentrerad redesign av AcadeMedia Academy, skapad för att minska
-            informationsöverflöd, synliggöra framsteg och göra relevant kompetensutveckling
-            enklare att hitta.
+            En personcentrerad redesign av AcadeMedia Academy som minskar
+            informationsöverflöd och gör relevant kompetensutveckling enklare att hitta och
+            fortsätta.
           </p>
 
           <dl className="project-meta" aria-label="Projektfakta">
             <div>
               <dt>Min roll</dt>
-              <dd>UX/UI designer & prototyper</dd>
+              <dd>UX/UI-designer · prototypansvar</dd>
             </div>
             <div>
               <dt>Team</dt>
@@ -170,13 +170,13 @@ export default function Home() {
           </div>
           <div className="prose-large">
             <p>
-              Academy ska vara navet för AcadeMedias medarbetares kompetensutveckling. I
-              utgångsläget möttes användaren av en opersonlig struktur, otydlig navigation och
-              ett stort kursutbud som var svårt att sålla.
+              Academy ska vara navet för medarbetarnas kompetensutveckling. I utgångsläget
+              gjorde en opersonlig struktur, otydlig navigation och ett stort kursutbud det
+              svårt att hitta rätt.
             </p>
             <p>
-              Resultatet blev digital osäkerhet genom hela flödet, från att hitta rätt kurs
-              till att förstå formatet och känna sig trygg nog att anmäla sig.
+              Osäkerheten följde användaren från sökning till anmälan: Vad är relevant för min
+              roll, vilket format gäller och vad blir nästa steg?
             </p>
           </div>
         </div>
@@ -195,6 +195,20 @@ export default function Home() {
             <span>gemensam lärplattform</span>
           </div>
         </div>
+        <div className="site-shell audience-compact" aria-label="Projektets målgrupper">
+          <div>
+            <p className="eyebrow">Målgrupp</p>
+            <h3>Tre roller. Två gemensamma behov.</h3>
+            <p>
+              Hitta relevant innehåll och förstå nästa steg, oavsett roll eller verksamhet.
+            </p>
+          </div>
+          <div className="audience-role-list">
+            <span>Lärare & pedagoger</span>
+            <span>Administrativ personal</span>
+            <span>Skolledare</span>
+          </div>
+        </div>
       </section>
 
       <section className="section statement-section">
@@ -207,49 +221,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-rule">
-        <div className="site-shell">
-          <div className="section-heading compact-heading">
-            <p className="eyebrow">Målgrupp</p>
-            <h2>En plattform. Flera arbetssituationer.</h2>
-            <p>
-              Lösningen behöver fungera både för kontinuerligt lärande och för obligatoriska
-              utbildningar, oavsett roll eller verksamhet.
-            </p>
-          </div>
-
-          <div className="audience-grid">
-            <article>
-              <span>01</span>
-              <h3>Lärare & pedagoger</h3>
-              <p>Behöver hitta relevant kompetensutveckling utan att lämna det dagliga arbetets tempo.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Administrativ personal</h3>
-              <p>Behöver överblick över obligatoriskt innehåll, riktlinjer och återkommande utbildningar.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Skolledare</h3>
-              <p>Behöver kunna följa progression och stötta medarbetarnas utveckling på ett tydligt sätt.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section className="section contribution-section">
         <div className="site-shell contribution-grid">
           <div className="contribution-marker">
             <span>Min roll</span>
-            <strong>UX/UI designer och prototyper</strong>
+            <strong>UX/UI-designer med prototypansvar</strong>
           </div>
           <div className="contribution-copy">
             <p className="eyebrow">Mitt bidrag</p>
             <h2>Struktur i både produkt och process.</h2>
             <p className="prose-large">
-              Jag tog en aktiv designerroll med fokus på gränssnittsprototyp, visuellt flöde och ordning
-              i teamets gemensamma arbetsfiler.
+              Jag ansvarade särskilt för den interaktiva Figma-prototypen, gränssnittets
+              visuella flöde och strukturen i teamets arbetsfiler.
             </p>
             <ul className="contribution-list">
               <li>Drev den interaktiva prototypen i Figma framåt.</li>
@@ -267,12 +250,9 @@ export default function Home() {
             <p className="eyebrow">Mitt komponentansvar</p>
             <h2>AcadeMedia tipsar</h2>
             <p className="prose-large">
-              Jag formgav karusellkomponenten från kortstruktur och visuell hierarki till
-              navigation och återkoppling.
-            </p>
-            <p>
-              Komponenten hjälper användaren att upptäcka relevanta utbildningar utan att
-              tappa sammanhanget på dashboarden.
+              Jag formgav karusellen från kortstruktur och visuell hierarki till navigation,
+              hovringslägen och återkoppling. Den hjälper användaren att upptäcka relevanta
+              utbildningar utan att tappa sammanhanget.
             </p>
             <dl className="component-facts" aria-label="Mitt ansvar för komponenten">
               <div><dt>Ansvar</dt><dd>Komponentdesign och prototyp</dd></div>
@@ -353,7 +333,9 @@ export default function Home() {
             label="Academy · Dashboard"
             src="/images/dashboard-start.webp"
             alt="Hela den omdesignade dashboarden i Academy från välkomstyta till rekommenderade och obligatoriska utbildningar."
-            caption="Dashboarden i sin helhet. Bilden visas utan beskärning för att bevara den tänkta vertikala rytmen och prioriteringen mellan sektionerna."
+            caption="Dashboardens första vy visas här. Öppna hela vyn för att följa den kompletta vertikala rytmen och prioriteringen mellan sektionerna."
+            className="dashboard-visual"
+            expandable
           />
         </div>
       </section>
@@ -386,7 +368,7 @@ export default function Home() {
 
       <section className="section learning-section">
         <div className="site-shell section-heading compact-heading">
-          <p className="eyebrow">Mitt lärande</p>
+          <p className="eyebrow">Lärandeytor</p>
           <h2>Progression som går att förstå med en blick.</h2>
           <p>
             Påbörjade, avslutade och sparade utbildningar får varsin tydlig kontext. Det gör
@@ -416,40 +398,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section principle-section section-rule">
-        <div className="site-shell">
-          <div className="section-heading compact-heading">
-            <p className="eyebrow">Designprinciper</p>
-            <h2>Tre principer höll lösningen samman.</h2>
-          </div>
-          <div className="principle-grid">
-            {principles.map((principle, index) => (
-              <article key={principle.title}>
-                <span>0{index + 1}</span>
-                <h3>{principle.title}</h3>
-                <p>{principle.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section outcome-section">
         <div className="site-shell outcome-grid">
           <div>
-            <p className="eyebrow">Validering</p>
-            <h2>Tydligare helhet med identifierade nästa steg.</h2>
+            <p className="eyebrow">Resultat & nästa steg</p>
+            <h2>Vad valideringen visade.</h2>
           </div>
           <div className="outcome-copy">
             <p className="prose-large">
-              De heuristiska utvärderingarna bekräftade att dashboarden gav en tydlig och
-              motiverande överblick, medan katalogens filter och informationshierarki gjorde
-              det lättare att fatta beslut.
+              Utvärderingarna bekräftade att dashboarden gav en tydlig överblick och att
+              filter och informationshierarki gjorde katalogen lättare att använda.
             </p>
             <div className="outcome-list">
               <div><span>01</span><p>Personliga rekommendationer minskar irrelevant innehåll.</p></div>
-              <div><span>02</span><p>Konsekventa mönster stärker orientering och kontroll.</p></div>
-              <div><span>03</span><p>Tydlig kursstatus stödjer nästa handling.</p></div>
+              <div><span>02</span><p>Synlig kursstatus gör nästa handling tydlig.</p></div>
+              <div><span>03</span><p>Filter och konsekventa mönster stärker orientering och kontroll.</p></div>
               <div><span>04</span><p>Support, empty states och feedback är naturliga nästa steg.</p></div>
             </div>
           </div>
