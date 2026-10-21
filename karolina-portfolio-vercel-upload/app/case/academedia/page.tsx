@@ -5,10 +5,10 @@ import SiteNavigation from '../../SiteNavigation';
 export const metadata: Metadata = {
   title: 'AcadeMedia Academy: Case study',
   description:
-    'En UX/UI case study om hur AcadeMedia Academy omformades för tydligare navigation, personliga rekommendationer och lägre kognitiv belastning.',
+    'Ett UX/UI-case om hur AcadeMedia Academy omformades för tydligare navigation, personliga rekommendationer och lägre kognitiv belastning.',
   openGraph: {
     title: 'En tydligare väg genom lärandet.',
-    description: 'AcadeMedia Academy · UX/UI case study',
+    description: 'AcadeMedia Academy · UX/UI-case',
     images: [
       {
         url: '/images/dashboard-start.webp',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'En tydligare väg genom lärandet.',
-    description: 'AcadeMedia Academy · UX/UI case study',
+    description: 'AcadeMedia Academy · UX/UI-case',
     images: ['/images/dashboard-start.webp'],
   },
 };
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const processSteps = [
   {
     number: '01',
-    title: 'Research & syntes',
+    title: 'Insikter & syntes',
     text: 'Vi analyserade befintliga intervjuer, klustrade återkommande hinder och jämförde andra lärplattformar.',
   },
   {
@@ -112,7 +112,9 @@ export default function Home() {
         <div className="site-shell">
           <div className="eyebrow-row">
             <p className="eyebrow">Case study · Experience design</p>
-            <p className="case-index">Projektperiod · 2026 Q2</p>
+            <div className="case-context" aria-label="Projektinformation">
+              <p className="case-index">Lästid · 6 min</p>
+            </div>
           </div>
 
           <h1>En tydligare väg genom lärandet.</h1>
@@ -218,8 +220,10 @@ export default function Home() {
         <div className="site-shell statement-grid">
           <p className="eyebrow">Designfråga</p>
           <blockquote>
-            Hur kan vi skapa en dashboard och katalog som visar rollrelevanta utbildningar,
-            motiverar genom synliga framsteg och gör nästa steg självklart?
+            <span className="heading-line">Hur kan vi skapa en dashboard och katalog</span>
+            <span className="heading-line">som visar rollrelevanta utbildningar,</span>
+            <span className="heading-line">motiverar genom synliga framsteg</span>
+            <span className="heading-line">och gör nästa steg självklart?</span>
           </blockquote>
         </div>
       </section>
@@ -228,7 +232,10 @@ export default function Home() {
         <div className="site-shell contribution-grid">
           <div className="contribution-marker">
             <span>Min roll</span>
-            <strong>UX/UI-designer med prototypansvar</strong>
+            <strong>
+              <span className="heading-line">UX/UI-designer</span>
+              <span className="heading-line">med prototypansvar</span>
+            </strong>
           </div>
           <div className="contribution-copy">
             <p className="eyebrow">Mitt bidrag</p>
@@ -419,7 +426,7 @@ export default function Home() {
               <div><span>01</span><p>Personliga rekommendationer minskar irrelevant innehåll.</p></div>
               <div><span>02</span><p>Synlig kursstatus gör nästa handling tydlig.</p></div>
               <div><span>03</span><p>Filter och konsekventa mönster stärker orientering och kontroll.</p></div>
-              <div><span>04</span><p>Support, empty states och feedback är naturliga nästa steg.</p></div>
+              <div><span>04</span><p>Stöd, tydliga tomlägen och återkoppling är naturliga nästa steg.</p></div>
             </div>
           </div>
         </div>
