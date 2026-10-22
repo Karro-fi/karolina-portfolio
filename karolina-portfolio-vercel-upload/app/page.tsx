@@ -68,7 +68,7 @@ export default function PortfolioHome() {
               <p className="eyebrow">Utvalda projekt</p>
               <h2>Projekt</h2>
             </div>
-            <p>3 publicerade · 1 kommande</p>
+            <p>4 publicerade · 1 kommande</p>
           </div>
 
           <div className="project-card-grid">
@@ -163,6 +163,36 @@ export default function PortfolioHome() {
                 <span>Kommande</span>
               </div>
             </article>
+
+            <a
+              className="case-card case-card--game"
+              href="https://karropara.itch.io/hxan-till-blkulla"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Spela Häxan till Blåkulla på itch.io, öppnas i en ny flik"
+            >
+              <div className="case-card-media case-card-media--game">
+                <img
+                  src="/images/haxan-till-blakulla.webp"
+                  alt="Pixelillustration från Häxan till Blåkulla med en liten häxa, plattformar, fiender och Blåkulla i bakgrunden."
+                  loading="lazy"
+                />
+              </div>
+              <div className="case-card-copy">
+                <p className="eyebrow">
+                  Game design · Experience design · Vibe coding
+                </p>
+                <h3>Häxan till Blåkulla</h3>
+                <p>
+                  Ett 2D-plattformsspel i retrostil, skapat genom vibe coding
+                  med fokus på progression, balansering och tydlig
+                  spelarfeedback genom åtta banor.
+                </p>
+                <span>
+                  Spela på itch.io <span aria-hidden="true">↗</span>
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -256,60 +286,63 @@ export default function PortfolioHome() {
             </div>
           </div>
 
-          <div className="about-expertise" aria-label="Kompetenser och verktyg">
-            <div className="expertise-group expertise-group-skills">
-              <p className="eyebrow">Kompetens</p>
-              <div className="expertise-cluster expertise-cluster-core">
-                <p className="expertise-label">Kärnkompetenser</p>
-                <ul className="expertise-list expertise-list-core">
+          <div className="about-expertise" aria-labelledby="expertise-title">
+            <div className="expertise-intro">
+              <p className="eyebrow">Kompetens &amp; verktyg</p>
+              <h3 id="expertise-title">Det jag arbetar med</h3>
+            </div>
+
+            <div className="expertise-editorial-grid">
+              <section className="expertise-column">
+                <h4>UX &amp; design</h4>
+                <ul>
                   {[
                     'UX/UI',
                     'Användarresearch',
                     'Användartester',
                     'Interaktionsdesign',
                     'Tillgänglighet',
+                    'Tjänstedesign',
                   ].map((item) => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-              </div>
+              </section>
 
-              <div className="expertise-cluster">
-                <p className="expertise-label">Kompletterande kompetenser</p>
-                <ul className="expertise-list expertise-list-secondary">
-                {[
-                  'Spelifiering',
-                  'Agila arbetssätt',
-                  'Tjänstedesign',
-                  'Speldesign',
-                  'Generativ AI',
-                  'AI-assisterad prototypning',
-                  'Videoredigering',
-                  'Fotografi',
-                ].map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
+              <section className="expertise-column">
+                <h4>Skapande &amp; arbetssätt</h4>
+                <ul>
+                  {[
+                    'Spelifiering',
+                    'Agila arbetssätt',
+                    'Speldesign',
+                    'Generativ AI',
+                    'AI-assisterad prototypning',
+                    'Videoredigering',
+                    'Fotografi',
+                  ].map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
-              </div>
-            </div>
+              </section>
 
-            <div className="expertise-group expertise-group-tools">
-              <p className="eyebrow">Verktyg</p>
-              <p className="expertise-label">Verktyg jag arbetar i</p>
-              <ul className="expertise-list-tools">
-                {[
-                  'Figma',
-                  'Google Gemini',
-                  'Codex',
-                  'Trello',
-                  'ChatGPT',
-                  'Miro',
-                  'CapCut',
-                  'Canva',
-                ].map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <section className="expertise-column">
+                <h4>Verktyg</h4>
+                <ul>
+                  {[
+                    'Figma',
+                    'Google Gemini',
+                    'Codex',
+                    'Trello',
+                    'ChatGPT',
+                    'Miro',
+                    'CapCut',
+                    'Canva',
+                  ].map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </section>
             </div>
           </div>
         </div>
