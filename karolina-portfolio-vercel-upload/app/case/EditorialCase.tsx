@@ -275,7 +275,7 @@ export default function EditorialCase(props: EditorialCaseProps) {
             {props.reflectionText.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
-            <blockquote>”{props.quote}”</blockquote>
+            <blockquote>{props.quote}</blockquote>
           </div>
         </div>
       </section>
