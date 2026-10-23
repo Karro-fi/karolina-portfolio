@@ -221,7 +221,7 @@ export default function PortfolioHome() {
                 <div className="case-card-media video-placeholder" aria-hidden="true">
                   <div className="video-placeholder-topline">
                     <span>Neuro Sense</span>
-                    <span>Video kommer inom kort</span>
+                    
                   </div>
                   <span className="video-play-symbol">▶</span>
                   <div className="video-placeholder-timeline">
@@ -233,7 +233,7 @@ export default function PortfolioHome() {
                 </div>
                 <div className="case-card-copy">
                   <p className="eyebrow">
-                    Konceptvideo · AI generering · Videoredigering
+                    Labbkurs · Konceptvideo · AI generering · Videoredigering
                   </p>
                   <h3>Neuro Sense</h3>
                   <p>
