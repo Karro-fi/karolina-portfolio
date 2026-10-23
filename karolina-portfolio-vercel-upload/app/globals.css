@@ -3109,3 +3109,16 @@ h3 {
     transform: none;
   }
 }
+
+
+/* Gemini: behåll hela raden som hovyta men färgsätt bara texten. */
+.expertise-list-tools li:nth-child(2):hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+.expertise-list-tools li:nth-child(2):hover::before {
+  background: var(--accent);
+  box-shadow: none;
+  transform: none;
+}
