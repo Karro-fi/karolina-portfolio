@@ -1,5 +1,3 @@
-import ContactPanelEffects from './ContactPanelEffects';
-
 type SiteFooterProps = {
   backHref?: string;
   backLabel?: string;
@@ -11,34 +9,40 @@ export default function SiteFooter({
 }: SiteFooterProps) {
   return (
     <footer className="site-footer" id="contact">
-      <ContactPanelEffects />
-      <div className="site-shell footer-contact">
-        <div className="footer-contact-copy">
-          <p className="eyebrow">Kontakt &amp; samarbete</p>
-          <h2>Låt oss prata vidare.</h2>
-          <p>
-            Har du möjlighet att erbjuda LIA, ett projekt eller en idé som du
-            vill bolla? Jag tar gärna ett första samtal om UX, visuell
-            gestaltning och digital design.
-          </p>
+      <section className="footer-contact" aria-labelledby="footer-contact-title">
+        <h2 className="sr-only" id="footer-contact-title">
+          Låt oss prata vidare
+        </h2>
+        <div className="footer-marquee" aria-hidden="true">
+          <div className="footer-marquee-track">
+            {[0, 1].map((group) => (
+              <div className="footer-marquee-group" key={group}>
+                <span>Låt oss prata vidare</span>
+                <span className="footer-marquee-dot">●</span>
+                <span>Låt oss prata vidare</span>
+                <span className="footer-marquee-dot">●</span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <nav className="footer-contact-links" aria-label="Kontaktlänkar">
-          <a href="mailto:karolina.paraskevas@gmail.com">
-            <span>Mail</span>
-            <strong>karolina.paraskevas@gmail.com</strong>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/karolina-paraskevas-887808200/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Karolina Paraskevas på LinkedIn"
-          >
-            <span>LinkedIn</span>
-            <strong>LinkedIn</strong>
-          </a>
-        </nav>
-      </div>
+        <div className="site-shell footer-contact-bar">
+          <p>Kontakt &amp; samarbete</p>
+          <nav className="footer-contact-links" aria-label="Kontaktlänkar">
+            <a href="mailto:karolina.paraskevas@gmail.com">
+              karolina.paraskevas@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/karolina-paraskevas-887808200/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Karolina Paraskevas på LinkedIn"
+            >
+              LinkedIn
+            </a>
+          </nav>
+        </div>
+      </section>
 
       <div className="site-shell footer-meta">
         <p>Karolina Paraskevas · Experience Designer</p>
