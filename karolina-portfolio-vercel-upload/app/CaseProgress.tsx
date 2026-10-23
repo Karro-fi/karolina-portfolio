@@ -24,10 +24,10 @@ export default function CaseProgress() {
         processGrid.classList.add('reveal-ready');
         processObserver = new IntersectionObserver(
           ([entry]) => {
-            if (!entry.isIntersecting) return;
-
-            processGrid.classList.add('is-revealed');
-            processObserver?.disconnect();
+            processGrid.classList.toggle(
+              'is-revealed',
+              entry.isIntersecting,
+            );
           },
           {
             rootMargin: '0px 0px -10% 0px',
