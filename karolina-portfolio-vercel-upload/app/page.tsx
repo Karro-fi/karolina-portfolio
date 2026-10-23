@@ -180,13 +180,14 @@ export default function PortfolioHome() {
               </div>
               <div className="case-card-copy">
                 <p className="eyebrow">
-                  Game design · Experience design · Vibe coding
+                  Game design · Experience design · Spelkurs
                 </p>
                 <h3>Häxan till Blåkulla</h3>
                 <p>
-                  Ett 2D-plattformsspel i retrostil, skapat genom vibe coding
-                  med fokus på progression, balansering och tydlig
-                  spelarfeedback genom åtta banor.
+                  Ett vibekodat 2D-plattformsspel i retrostil med åtta banor på
+                  vägen mot Blåkulla. Jag formgav progression, svårighetskurva
+                  och spelarfeedback – från samlarobjekt och flygkraft till
+                  större strider. Klarar du dig hela vägen till slutbossen?
                 </p>
                 <span>
                   Spela på itch.io <span aria-hidden="true">↗</span>
