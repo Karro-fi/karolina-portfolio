@@ -60,7 +60,7 @@ export default function SiteFooter({
       </section>
 
       <div className="site-shell footer-meta">
-        <p>Karolina Paraskevas · Experience Designer</p>
+        <p>Karolina Paraskevas · Studerande Experience Designer</p>
         <a href={backHref}>{backLabel}</a>
       </div>
     </footer>
