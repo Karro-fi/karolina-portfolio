@@ -703,7 +703,7 @@ h1 {
 
 .case-card-copy > p.game-card-detail,
 .case-card-copy > p.video-card-detail {
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
 }
 
 .game-card-hook {
