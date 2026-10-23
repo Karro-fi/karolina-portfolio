@@ -68,7 +68,6 @@ export default function PortfolioHome() {
               <p className="eyebrow">Portfolio</p>
               <h2>Utvalda arbeten</h2>
             </div>
-            <p>Case och mindre projekt inom UX, spel och rörligt.</p>
           </div>
 
           <section className="work-group" aria-labelledby="case-heading">
@@ -76,8 +75,10 @@ export default function PortfolioHome() {
               <div>
                 <p className="eyebrow">Fördjupade arbeten</p>
                 <h3 id="case-heading">Case</h3>
+                <p className="work-group-description">
+                  Fördjupade projekt med process, designbeslut och resultat.
+                </p>
               </div>
-              <p>Process, designbeslut och resultat i ett större sammanhang.</p>
             </div>
 
             <div className="project-card-grid">
@@ -180,8 +181,10 @@ export default function PortfolioHome() {
               <div>
                 <p className="eyebrow">Mindre format</p>
                 <h3 id="mini-heading">Miniprojekt</h3>
+                <p className="work-group-description">
+                  Mindre arbeten inom spel, video och visuella experiment.
+                </p>
               </div>
-              <p>Spel, video och visuella experiment där processen får ta plats.</p>
             </div>
 
             <div className="mini-project-grid">
@@ -204,8 +207,8 @@ export default function PortfolioHome() {
                   <h3>Häxan till Blåkulla</h3>
                   <p className="game-card-intro">
                     Ett vibekodat miniprojekt från en speldesignkurs: ett
-                    2D-plattformsspel i retrostil med åtta banor på vägen mot
-                    Blåkulla.
+                    plattformsspel i 2D med retrostil och åtta banor på vägen
+                    mot Blåkulla.
                   </p>
                   <p className="game-card-detail">
                     Jag formgav progression, svårighetskurva och spelarfeedback
@@ -240,17 +243,20 @@ export default function PortfolioHome() {
                 </div>
                 <div className="case-card-copy">
                   <p className="eyebrow">
-                    Konceptvideo · AI-generering · Videoredigering
+                    Konceptvideo · AI generering · Videoredigering
                   </p>
                   <h3>Neuro Sense</h3>
                   <p>
                     En konceptvideo om ett adaptivt hem, uppbyggd scen för scen
-                    med AI-genererat bild- och videomaterial.
+                    med bild och videomaterial skapat med AI.
                   </p>
                   <p className="video-card-detail">
-                    Jag tog fram och itererade bildprompter i Gemini, utvecklade
-                    separata scenprompter och sammanställde voiceover,
-                    ljuddesign, tajming och färgkorrigering i CapCut.
+                    I arbetet med Neuro Sense tog jag ett särskilt ansvar för
+                    klippning och redigering. Det var en del av processen där
+                    mitt intresse för visuellt berättande verkligen kom till
+                    sin rätt. Jag tog också fram och itererade bildprompter i
+                    Gemini, utvecklade scenprompter och sammanställde voiceover,
+                    ljudläggning, tajming och färgkorrigering i CapCut.
                   </p>
                   <span>Video kommer</span>
                 </div>
@@ -357,21 +363,34 @@ export default function PortfolioHome() {
               </div>
               <p>
                 Från research och flöden till visuell gestaltning, prototyper
-                och rörligt innehåll.
+                och rörligt innehåll. Jag arbetar agilt och iterativt genom hela
+                processen.
               </p>
             </div>
 
             <div className="expertise-map">
               <section className="expertise-row">
-                <h4>UX &amp; interaktion</h4>
+                <h4>Förstår</h4>
+                <ul>
+                  {[
+                    'Användarresearch',
+                    'Användartester',
+                    'Tjänstedesign',
+                    'Tillgänglighet',
+                  ].map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </section>
+
+              <section className="expertise-row">
+                <h4>Formger</h4>
                 <ul>
                   {[
                     'UX/UI',
-                    'Användarresearch',
-                    'Användartester',
                     'Interaktionsdesign',
-                    'Tillgänglighet',
-                    'Tjänstedesign',
+                    'Speldesign',
+                    'Spelifiering',
                   ].map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -379,13 +398,12 @@ export default function PortfolioHome() {
               </section>
 
               <section className="expertise-row">
-                <h4>Visuellt &amp; berättande</h4>
+                <h4>Producerar</h4>
                 <ul>
                   {[
                     'Videoredigering',
-                    'Ljuddesign & voiceover',
                     'Fotografi',
-                    'Speldesign',
+                    'Voiceover och ljudläggning',
                   ].map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -393,13 +411,12 @@ export default function PortfolioHome() {
               </section>
 
               <section className="expertise-row">
-                <h4>AI &amp; arbetssätt</h4>
+                <h4>Utforskar och itererar</h4>
                 <ul>
                   {[
                     'Generativ AI',
-                    'Promptdesign',
-                    'AI-assisterad prototypning',
-                    'Spelifiering',
+                    'Promptutveckling för bild och video',
+                    'AI assisterad prototypning',
                     'Agila arbetssätt',
                   ].map((item) => (
                     <li key={item}>{item}</li>
