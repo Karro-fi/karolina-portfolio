@@ -375,7 +375,7 @@ export default function PortfolioHome() {
                     'Spelifiering',
                     'Speldesign',
                     'Generativ AI',
-                    'AI assisterad prototypning',
+                    
                     'Agila arbetssätt',
                     'Videoredigering',
                     'Fotografi',
