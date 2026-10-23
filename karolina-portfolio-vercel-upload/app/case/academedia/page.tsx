@@ -457,8 +457,8 @@ export default function Home() {
               sparar när struktur, komponenter och ansvar är tydliga från första dagen.
             </p>
             <blockquote>
-              ”Struktur är inte bara ordning i filerna. Det är ett designbeslut som gör bättre
-              iterationer möjliga.”
+              Struktur är inte bara ordning i filerna. Det är ett designbeslut som gör bättre
+              iterationer möjliga.
             </blockquote>
           </div>
         </div>
