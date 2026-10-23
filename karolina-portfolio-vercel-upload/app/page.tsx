@@ -150,7 +150,7 @@ export default function PortfolioHome() {
 
               <article
                 className="case-card case-card--pending"
-                aria-label="LE Keramik, kommande projekt"
+                aria-label="Le Keramik, kommande projekt"
               >
                 <div className="case-card-media pending-card-media">
                   <div>
@@ -159,7 +159,7 @@ export default function PortfolioHome() {
                 </div>
                 <div className="case-card-copy">
                   <p className="eyebrow">UX · 2026 Q4</p>
-                  <h3>LE Keramik</h3>
+                  <h3>Le Keramik</h3>
                   <p>Case study publiceras när projektet är redo att visas.</p>
                   <span>Kommande</span>
                 </div>
