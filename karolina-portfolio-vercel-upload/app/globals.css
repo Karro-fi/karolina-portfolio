@@ -2966,3 +2966,60 @@ h3 {
     padding: var(--space-4);
   }
 }
+
+
+.case-page .process-grid {
+  position: relative;
+}
+
+.case-page .process-grid.reveal-ready {
+  border-top-color: transparent;
+}
+
+.case-page .process-grid.reveal-ready::before {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: var(--line);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.case-page .process-grid.reveal-ready article {
+  --process-reveal-delay: 0ms;
+}
+
+.case-page .process-grid.reveal-ready article:nth-child(2) {
+  --process-reveal-delay: 110ms;
+}
+
+.case-page .process-grid.reveal-ready article:nth-child(3) {
+  --process-reveal-delay: 220ms;
+}
+
+.case-page .process-grid.reveal-ready article > span,
+.case-page .process-grid.reveal-ready article > h3,
+.case-page .process-grid.reveal-ready article > p {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 420ms ease var(--process-reveal-delay),
+    transform 560ms cubic-bezier(0.22, 1, 0.36, 1)
+      var(--process-reveal-delay);
+}
+
+.case-page .process-grid.reveal-ready.is-revealed::before {
+  transform: scaleX(1);
+}
+
+.case-page .process-grid.reveal-ready.is-revealed article > span,
+.case-page .process-grid.reveal-ready.is-revealed article > h3,
+.case-page .process-grid.reveal-ready.is-revealed article > p {
+  opacity: 1;
+  transform: translateY(0);
+}
