@@ -155,7 +155,6 @@ export default function PortfolioHome() {
                 <div className="case-card-media pending-card-media">
                   <div>
                     <p>Kommande projekt</p>
-                    <span>UX</span>
                   </div>
                 </div>
                 <div className="case-card-copy">
@@ -222,7 +221,7 @@ export default function PortfolioHome() {
                 <div className="case-card-media video-placeholder" aria-hidden="true">
                   <div className="video-placeholder-topline">
                     <span>Neuro Sense</span>
-                    <span>Video kommer</span>
+                    <span>Video kommer inom kort</span>
                   </div>
                   <span className="video-play-symbol">▶</span>
                   <div className="video-placeholder-timeline">
@@ -238,18 +237,21 @@ export default function PortfolioHome() {
                   </p>
                   <h3>Neuro Sense</h3>
                   <p>
-                    En konceptvideo om ett adaptivt hem, uppbyggd scen för scen
-                    med bild och videomaterial skapat med AI.
+                    Neuro Sense är ett fiktivt koncept som vi tog fram i kursen
+                    Labb. Idén handlar om ett adaptivt hem som anpassar miljön
+                    efter användarens behov.
                   </p>
                   <p className="video-card-detail">
-                    I arbetet med Neuro Sense tog jag ett särskilt ansvar för
-                    klippning och redigering. Det var en del av processen där
-                    mitt intresse för visuellt berättande verkligen kom till
-                    sin rätt. Jag tog också fram och itererade bildprompter i
-                    Gemini, utvecklade scenprompter och sammanställde voiceover,
-                    ljudläggning, tajming och färgkorrigering i CapCut.
+                    Jag tog särskilt ansvar för klippning och redigering. Det var
+                    också den del av arbetet där min förkärlek för redigering
+                    verkligen kom till liv.
                   </p>
-                  <span>Video kommer</span>
+                  <p className="video-card-detail">
+                    Jag arbetade även med bild och videoprompter i Google Gemini.
+                    I CapCut satte jag ihop materialet med röstspår, ljud, tajming
+                    och färgkorrigering till en sammanhängande konceptvideo.
+                  </p>
+                  <span>Video kommer inom kort</span>
                 </div>
               </article>
             </div>
