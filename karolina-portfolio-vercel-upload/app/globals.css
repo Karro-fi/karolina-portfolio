@@ -488,7 +488,40 @@ h1 {
   font-size: var(--type-small);
 }
 
+.work-group + .work-group {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--line);
+}
+
+.work-group-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  gap: var(--space-8);
+  align-items: end;
+  margin-bottom: var(--space-6);
+}
+
+.work-group-heading h3 {
+  margin: var(--space-2) 0 0;
+  font-size: clamp(2rem, 3.2vw, 3.75rem);
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.work-group-heading > p {
+  max-width: 560px;
+  margin: 0 0 var(--space-1);
+  color: var(--muted);
+}
+
 .project-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.mini-project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-4);
@@ -568,19 +601,99 @@ h1 {
   cursor: default;
 }
 
-.case-card--game {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(320px, 0.85fr);
-}
-
-.case-card--game .case-card-media {
-  height: auto;
-  min-height: 460px;
+.case-card--mini .case-card-media {
+  height: 360px;
 }
 
 .case-card-media--game img {
   object-position: center;
+}
+
+.video-placeholder {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: var(--space-4);
+  background:
+    radial-gradient(circle at 74% 26%, rgb(186 254 205 / 14%), transparent 28%),
+    linear-gradient(135deg, rgb(186 254 205 / 8%), transparent 52%),
+    var(--background);
+}
+
+.video-placeholder::before {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 79px,
+    rgb(186 254 205 / 3%) 80px
+  );
+  content: '';
+  pointer-events: none;
+}
+
+.video-placeholder-topline {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  left: var(--space-3);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  color: var(--muted);
+  font-family: var(--font-sora), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.video-play-symbol {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  padding-left: 4px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 1.4rem;
+  box-shadow: 0 0 48px rgb(186 254 205 / 8%);
+}
+
+.video-placeholder-timeline {
+  position: absolute;
+  right: var(--space-3);
+  bottom: var(--space-3);
+  left: var(--space-3);
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.25fr 0.8fr 1.5fr 0.55fr;
+  gap: var(--space-1);
+}
+
+.video-placeholder-timeline span {
+  height: 8px;
+  border-radius: 999px;
+  background: rgb(186 254 205 / 18%);
+}
+
+.video-placeholder-timeline span:first-child {
+  background: var(--accent);
+}
+
+.case-card-copy > p.game-card-detail,
+.case-card-copy > p.video-card-detail {
+  margin-top: var(--space-2);
+}
+
+.game-card-hook {
+  color: var(--foreground);
+  font-weight: 600;
 }
 
 .pending-card-media {
@@ -901,6 +1014,13 @@ h1 {
   border-top: 1px solid var(--line);
 }
 
+.expertise-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 0.65fr);
+  gap: var(--space-8);
+  align-items: end;
+}
+
 .expertise-intro h3 {
   max-width: 760px;
   margin: var(--space-2) 0 0;
@@ -909,36 +1029,74 @@ h1 {
   line-height: 1.08;
 }
 
-.expertise-editorial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-6);
-  margin-top: var(--space-8);
+.expertise-intro > p {
+  max-width: 520px;
+  margin: 0 0 var(--space-1);
+  color: var(--muted);
 }
 
-.expertise-column {
-  padding-top: var(--space-3);
+.expertise-map {
+  margin-top: var(--space-8);
+  border-bottom: 1px solid var(--line);
+}
+
+.expertise-row,
+.expertise-tools {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.35fr);
+  gap: var(--space-8);
+}
+
+.expertise-row {
+  padding-block: var(--space-4);
   border-top: 1px solid var(--line);
 }
 
-.expertise-column h4 {
-  margin: 0 0 var(--space-3);
+.expertise-row h4,
+.expertise-tools h4 {
+  margin: 0;
   color: var(--foreground);
   font-size: clamp(1.35rem, 1.7vw, 1.75rem);
   letter-spacing: -0.03em;
   line-height: 1.2;
 }
 
-.expertise-column ul {
+.expertise-row ul,
+.expertise-tools ul {
+  display: grid;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.expertise-column li {
+.expertise-row ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 var(--space-4);
+}
+
+.expertise-row li {
+  padding-block: var(--space-1);
+  color: color-mix(in srgb, var(--foreground) 82%, var(--muted));
+  font-size: var(--type-body);
+  line-height: 1.5;
+}
+
+.expertise-tools {
+  align-items: start;
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+}
+
+.expertise-tools ul {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 var(--space-3);
+}
+
+.expertise-tools li {
   padding-block: var(--space-2);
   border-bottom: 1px solid var(--line);
-  color: color-mix(in srgb, var(--foreground) 82%, var(--muted));
+  color: var(--accent);
   font-size: var(--type-body);
   line-height: 1.5;
 }
@@ -984,7 +1142,6 @@ h1 {
 @media (max-width: 1023px) {
   .portfolio-hero-bottom,
   .about-grid,
-  .about-expertise,
   .lia-grid {
     grid-template-columns: 1fr;
   }
@@ -1002,22 +1159,16 @@ h1 {
     min-height: 0;
   }
 
-  .project-card-grid {
+  .project-card-grid,
+  .mini-project-grid {
     grid-template-columns: 1fr;
   }
 
-  .expertise-editorial-grid {
+  .work-group-heading,
+  .expertise-intro,
+  .expertise-row,
+  .expertise-tools {
     grid-template-columns: 1fr;
-  }
-
-  .case-card--game {
-    grid-column: auto;
-    grid-template-columns: 1fr;
-  }
-
-  .case-card--game .case-card-media {
-    height: 420px;
-    min-height: 0;
   }
 }
 
@@ -1070,7 +1221,7 @@ h1 {
     height: 360px;
   }
 
-  .case-card--game .case-card-media {
+  .case-card--mini .case-card-media {
     height: 240px;
   }
 
@@ -1090,9 +1241,16 @@ h1 {
   }
 
   .about-expertise {
-    gap: var(--space-6);
     margin-top: var(--space-10);
     padding-top: var(--space-4);
+  }
+
+  .expertise-row ul {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-tools ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .coordinates dd {

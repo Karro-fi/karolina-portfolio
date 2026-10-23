@@ -65,142 +65,198 @@ export default function PortfolioHome() {
         <div className="site-shell">
           <div className="home-section-head">
             <div>
-              <p className="eyebrow">Utvalda projekt</p>
-              <h2>Projekt</h2>
+              <p className="eyebrow">Portfolio</p>
+              <h2>Utvalda arbeten</h2>
             </div>
-            <p>4 publicerade · 1 kommande</p>
+            <p>Case och mindre projekt inom UX, spel och rörligt.</p>
           </div>
 
-          <div className="project-card-grid">
-            <a
-              className="case-card"
-              href="/case/academedia"
-              aria-label="Läs projektet AcadeMedia Academy"
-            >
-              <div className="case-card-media case-card-media--academedia">
-                <img
-                  src="/images/dashboard-start.webp"
-                  alt="Dashboarden i Karolinas redesign av AcadeMedia Academy."
-                />
+          <section className="work-group" aria-labelledby="case-heading">
+            <div className="work-group-heading">
+              <div>
+                <p className="eyebrow">Fördjupade arbeten</p>
+                <h3 id="case-heading">Case</h3>
               </div>
-              <div className="case-card-copy">
-                <p className="eyebrow">UX/UI · Lärplattform · 2026 Q2</p>
-                <h3>AcadeMedia Academy</h3>
-                <p>
-                  En personcentrerad redesign av AcadeMedia Academy som minskar
-                  informationsöverflöd och gör nästa steg lättare att förstå.
-                </p>
-                <span>
-                  Läs projektet <span aria-hidden="true">↗</span>
-                </span>
-              </div>
-            </a>
+              <p>Process, designbeslut och resultat i ett större sammanhang.</p>
+            </div>
 
-            <a
-              className="case-card"
-              href="/case/kommunal"
-              aria-label="Läs projektet Kommunal Måendestöd"
-            >
-              <div className="case-card-media case-card-media--kommunal">
-                <img
-                  src="/images/kommunal-mobile.png"
-                  alt="Mobilmockup för Kommunal Måendestöd."
-                  loading="lazy"
-                />
-              </div>
-              <div className="case-card-copy">
-                <p className="eyebrow">UX/UI · Självskattning · 2025 Q2</p>
-                <h3>Kommunal Måendestöd</h3>
-                <p>
-                  Ett lugnare självskattningsflöde som gör resultat och nästa
-                  steg lättare att förstå.
-                </p>
-                <span>
-                  Läs projektet <span aria-hidden="true">↗</span>
-                </span>
-              </div>
-            </a>
-
-            <a
-              className="case-card"
-              href="/case/duro"
-              aria-label="Läs projektet Duro Sweden"
-            >
-              <div className="case-card-media case-card-media--duro">
-                <img
-                  src="/images/duro-product-grid.png"
-                  alt="Redesignad tapetkatalog för Duro Sweden."
-                  loading="lazy"
-                />
-              </div>
-              <div className="case-card-copy">
-                <p className="eyebrow">UX/UI · WCAG 2.1 AA · 2026 Q1</p>
-                <h3>Duro Sweden</h3>
-                <p>
-                  Tydligare filtrering, bättre kontrast och en mer inkluderande
-                  väg genom sortimentet.
-                </p>
-                <span>
-                  Läs projektet <span aria-hidden="true">↗</span>
-                </span>
-              </div>
-            </a>
-
-            <article
-              className="case-card case-card--pending"
-              aria-label="LE Keramik, kommande projekt"
-            >
-              <div className="case-card-media pending-card-media">
-                <div>
-                  <p>Kommande projekt</p>
-                  <span>UX</span>
+            <div className="project-card-grid">
+              <a
+                className="case-card"
+                href="/case/academedia"
+                aria-label="Läs projektet AcadeMedia Academy"
+              >
+                <div className="case-card-media case-card-media--academedia">
+                  <img
+                    src="/images/dashboard-start.webp"
+                    alt="Dashboarden i Karolinas redesign av AcadeMedia Academy."
+                  />
                 </div>
-              </div>
-              <div className="case-card-copy">
-                <p className="eyebrow">UX · 2026 Q4</p>
-                <h3>LE Keramik</h3>
-                <p>Case study publiceras när projektet är redo att visas.</p>
-                <span>Kommande</span>
-              </div>
-            </article>
+                <div className="case-card-copy">
+                  <p className="eyebrow">UX/UI · Lärplattform · 2026 Q2</p>
+                  <h3>AcadeMedia Academy</h3>
+                  <p>
+                    En personcentrerad redesign av AcadeMedia Academy som minskar
+                    informationsöverflöd och gör nästa steg lättare att förstå.
+                  </p>
+                  <span>
+                    Läs projektet <span aria-hidden="true">↗</span>
+                  </span>
+                </div>
+              </a>
 
-            <a
-              className="case-card case-card--game"
-              href="https://karropara.itch.io/hxan-till-blkulla"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Spela Häxan till Blåkulla på itch.io, öppnas i en ny flik"
-            >
-              <div className="case-card-media case-card-media--game">
-                <img
-                  src="/images/haxan-till-blakulla.webp"
-                  alt="Pixelillustration från Häxan till Blåkulla med en liten häxa, plattformar, fiender och Blåkulla i bakgrunden."
-                  loading="lazy"
-                />
+              <a
+                className="case-card"
+                href="/case/kommunal"
+                aria-label="Läs projektet Kommunal Måendestöd"
+              >
+                <div className="case-card-media case-card-media--kommunal">
+                  <img
+                    src="/images/kommunal-mobile.png"
+                    alt="Mobilmockup för Kommunal Måendestöd."
+                    loading="lazy"
+                  />
+                </div>
+                <div className="case-card-copy">
+                  <p className="eyebrow">UX/UI · Självskattning · 2025 Q2</p>
+                  <h3>Kommunal Måendestöd</h3>
+                  <p>
+                    Ett lugnare självskattningsflöde som gör resultat och nästa
+                    steg lättare att förstå.
+                  </p>
+                  <span>
+                    Läs projektet <span aria-hidden="true">↗</span>
+                  </span>
+                </div>
+              </a>
+
+              <a
+                className="case-card"
+                href="/case/duro"
+                aria-label="Läs projektet Duro Sweden"
+              >
+                <div className="case-card-media case-card-media--duro">
+                  <img
+                    src="/images/duro-product-grid.png"
+                    alt="Redesignad tapetkatalog för Duro Sweden."
+                    loading="lazy"
+                  />
+                </div>
+                <div className="case-card-copy">
+                  <p className="eyebrow">UX/UI · WCAG 2.1 AA · 2026 Q1</p>
+                  <h3>Duro Sweden</h3>
+                  <p>
+                    Tydligare filtrering, bättre kontrast och en mer inkluderande
+                    väg genom sortimentet.
+                  </p>
+                  <span>
+                    Läs projektet <span aria-hidden="true">↗</span>
+                  </span>
+                </div>
+              </a>
+
+              <article
+                className="case-card case-card--pending"
+                aria-label="LE Keramik, kommande projekt"
+              >
+                <div className="case-card-media pending-card-media">
+                  <div>
+                    <p>Kommande projekt</p>
+                    <span>UX</span>
+                  </div>
+                </div>
+                <div className="case-card-copy">
+                  <p className="eyebrow">UX · 2026 Q4</p>
+                  <h3>LE Keramik</h3>
+                  <p>Case study publiceras när projektet är redo att visas.</p>
+                  <span>Kommande</span>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section className="work-group work-group--mini" aria-labelledby="mini-heading">
+            <div className="work-group-heading">
+              <div>
+                <p className="eyebrow">Mindre format</p>
+                <h3 id="mini-heading">Miniprojekt</h3>
               </div>
-              <div className="case-card-copy">
-                <p className="eyebrow">
-                  Game design · Experience design · Spelkurs
-                </p>
-                <h3>Häxan till Blåkulla</h3>
-                <p className="game-card-intro">
-                  Ett vibekodat miniprojekt från en speldesignkurs: ett
-                  2D-plattformsspel i retrostil med åtta banor på vägen mot
-                  Blåkulla.
-                </p>
-                <p className="game-card-detail">
-                  Jag formgav progression, svårighetskurva och spelarfeedback,
-                  från samlarobjekt och flygkraft till större strider.
-                </p>
-                <p className="game-card-hook">
-                  Klarar du dig hela vägen till slutbossen?
-                </p>
-                <span>
-                  Spela på itch.io <span aria-hidden="true">↗</span>
-                </span>
-              </div>
-            </a>
-          </div>
+              <p>Spel, video och visuella experiment där processen får ta plats.</p>
+            </div>
+
+            <div className="mini-project-grid">
+              <a
+                className="case-card case-card--mini"
+                href="https://karropara.itch.io/hxan-till-blkulla"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Spela Häxan till Blåkulla på itch.io, öppnas i en ny flik"
+              >
+                <div className="case-card-media case-card-media--game">
+                  <img
+                    src="/images/haxan-till-blakulla.webp"
+                    alt="Pixelillustration från Häxan till Blåkulla med en liten häxa, plattformar, fiender och Blåkulla i bakgrunden."
+                    loading="lazy"
+                  />
+                </div>
+                <div className="case-card-copy">
+                  <p className="eyebrow">Speldesign · Vibe coding · Miniprojekt</p>
+                  <h3>Häxan till Blåkulla</h3>
+                  <p className="game-card-intro">
+                    Ett vibekodat miniprojekt från en speldesignkurs: ett
+                    2D-plattformsspel i retrostil med åtta banor på vägen mot
+                    Blåkulla.
+                  </p>
+                  <p className="game-card-detail">
+                    Jag formgav progression, svårighetskurva och spelarfeedback
+                    genom äpplen som ger XP, en växande häxrang, flygkraft och
+                    en finalboss.
+                  </p>
+                  <p className="game-card-hook">
+                    Klarar du dig hela vägen till slutbossen?
+                  </p>
+                  <span>
+                    Spela på itch.io <span aria-hidden="true">↗</span>
+                  </span>
+                </div>
+              </a>
+
+              <article
+                className="case-card case-card--mini case-card--video"
+                aria-label="Neuro Sense, video läggs till senare"
+              >
+                <div className="case-card-media video-placeholder" aria-hidden="true">
+                  <div className="video-placeholder-topline">
+                    <span>Neuro Sense</span>
+                    <span>Video kommer</span>
+                  </div>
+                  <span className="video-play-symbol">▶</span>
+                  <div className="video-placeholder-timeline">
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                </div>
+                <div className="case-card-copy">
+                  <p className="eyebrow">
+                    Konceptvideo · AI-generering · Videoredigering
+                  </p>
+                  <h3>Neuro Sense</h3>
+                  <p>
+                    En konceptvideo om ett adaptivt hem, uppbyggd scen för scen
+                    med AI-genererat bild- och videomaterial.
+                  </p>
+                  <p className="video-card-detail">
+                    Jag tog fram och itererade bildprompter i Gemini, utvecklade
+                    separata scenprompter och sammanställde voiceover,
+                    ljuddesign, tajming och färgkorrigering i CapCut.
+                  </p>
+                  <span>Video kommer</span>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -295,13 +351,19 @@ export default function PortfolioHome() {
 
           <div className="about-expertise" aria-labelledby="expertise-title">
             <div className="expertise-intro">
-              <p className="eyebrow">Kompetens &amp; verktyg</p>
-              <h3 id="expertise-title">Det jag arbetar med</h3>
+              <div>
+                <p className="eyebrow">Kompetens &amp; verktyg</p>
+                <h3 id="expertise-title">Det jag gör i praktiken</h3>
+              </div>
+              <p>
+                Från research och flöden till visuell gestaltning, prototyper
+                och rörligt innehåll.
+              </p>
             </div>
 
-            <div className="expertise-editorial-grid">
-              <section className="expertise-column">
-                <h4>UX &amp; design</h4>
+            <div className="expertise-map">
+              <section className="expertise-row">
+                <h4>UX &amp; interaktion</h4>
                 <ul>
                   {[
                     'UX/UI',
@@ -316,41 +378,53 @@ export default function PortfolioHome() {
                 </ul>
               </section>
 
-              <section className="expertise-column">
-                <h4>Skapande &amp; arbetssätt</h4>
+              <section className="expertise-row">
+                <h4>Visuellt &amp; berättande</h4>
                 <ul>
                   {[
-                    'Spelifiering',
-                    'Agila arbetssätt',
-                    'Speldesign',
-                    'Generativ AI',
-                    'AI-assisterad prototypning',
                     'Videoredigering',
+                    'Ljuddesign & voiceover',
                     'Fotografi',
+                    'Speldesign',
                   ].map((item) => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
               </section>
 
-              <section className="expertise-column">
-                <h4>Verktyg</h4>
+              <section className="expertise-row">
+                <h4>AI &amp; arbetssätt</h4>
                 <ul>
                   {[
-                    'Figma',
-                    'Google Gemini',
-                    'Codex',
-                    'Trello',
-                    'ChatGPT',
-                    'Miro',
-                    'CapCut',
-                    'Canva',
+                    'Generativ AI',
+                    'Promptdesign',
+                    'AI-assisterad prototypning',
+                    'Spelifiering',
+                    'Agila arbetssätt',
                   ].map((item) => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
               </section>
             </div>
+
+            <section className="expertise-tools" aria-labelledby="tools-title">
+              <h4 id="tools-title">Verktyg jag arbetar i</h4>
+              <ul>
+                {[
+                  'Figma',
+                  'Google Gemini',
+                  'ChatGPT',
+                  'Codex',
+                  'Miro',
+                  'Trello',
+                  'CapCut',
+                  'Canva',
+                ].map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </section>
           </div>
         </div>
       </section>
