@@ -17,9 +17,9 @@ export default function SiteFooter({
           <p className="eyebrow">Kontakt &amp; samarbete</p>
           <h2>Låt oss prata vidare.</h2>
           <p>
-            Har du en LIA-plats, ett projekt eller en idé som du vill bolla?
-            Jag tar gärna ett första samtal om UX, visuell gestaltning och
-            digital design.
+            Har du möjlighet att erbjuda LIA, ett projekt eller en idé som du
+            vill bolla? Jag tar gärna ett första samtal om UX, visuell
+            gestaltning och digital design.
           </p>
         </div>
 
@@ -27,7 +27,6 @@ export default function SiteFooter({
           <a href="mailto:karolina.paraskevas@gmail.com">
             <span>Mail</span>
             <strong>karolina.paraskevas@gmail.com</strong>
-            <span aria-hidden="true">↗</span>
           </a>
           <a
             href="https://www.linkedin.com/in/karolina-paraskevas-887808200/"
@@ -37,7 +36,6 @@ export default function SiteFooter({
           >
             <span>LinkedIn</span>
             <strong>LinkedIn</strong>
-            <span aria-hidden="true">↗</span>
           </a>
         </nav>
       </div>
