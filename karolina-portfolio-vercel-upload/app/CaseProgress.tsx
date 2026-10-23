@@ -8,6 +8,36 @@ export default function CaseProgress() {
   useEffect(() => {
     let frame = 0;
 
+    const processGrid = document.querySelector<HTMLElement>(
+      '.case-page .process-grid',
+    );
+    let processObserver: IntersectionObserver | null = null;
+
+    if (processGrid) {
+      const reducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)',
+      ).matches;
+
+      if (reducedMotion) {
+        processGrid.classList.add('is-revealed');
+      } else {
+        processGrid.classList.add('reveal-ready');
+        processObserver = new IntersectionObserver(
+          ([entry]) => {
+            if (!entry.isIntersecting) return;
+
+            processGrid.classList.add('is-revealed');
+            processObserver?.disconnect();
+          },
+          {
+            rootMargin: '0px 0px -10% 0px',
+            threshold: 0.18,
+          },
+        );
+        processObserver.observe(processGrid);
+      }
+    }
+
     const updateProgress = () => {
       window.cancelAnimationFrame(frame);
       frame = window.requestAnimationFrame(() => {
@@ -29,6 +59,7 @@ export default function CaseProgress() {
       window.cancelAnimationFrame(frame);
       window.removeEventListener('scroll', updateProgress);
       window.removeEventListener('resize', updateProgress);
+      processObserver?.disconnect();
     };
   }, []);
 
