@@ -637,6 +637,17 @@ h1 {
   color: var(--muted);
 }
 
+.case-card-copy > p.game-card-detail {
+  margin-top: var(--space-2);
+}
+
+.case-card-copy > p.game-card-hook {
+  margin-top: var(--space-3);
+  color: var(--text);
+  font-family: var(--font-sora), sans-serif;
+  font-weight: 600;
+}
+
 .case-card-copy > span {
   margin-top: auto;
   padding-top: var(--space-4);

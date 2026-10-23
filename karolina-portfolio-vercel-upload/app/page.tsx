@@ -183,11 +183,17 @@ export default function PortfolioHome() {
                   Game design · Experience design · Spelkurs
                 </p>
                 <h3>Häxan till Blåkulla</h3>
-                <p>
-                  Ett vibekodat 2D-plattformsspel i retrostil med åtta banor på
-                  vägen mot Blåkulla. Jag formgav progression, svårighetskurva
-                  och spelarfeedback – från samlarobjekt och flygkraft till
-                  större strider. Klarar du dig hela vägen till slutbossen?
+                <p className="game-card-intro">
+                  Ett vibekodat miniprojekt från en speldesignkurs: ett
+                  2D-plattformsspel i retrostil med åtta banor på vägen mot
+                  Blåkulla.
+                </p>
+                <p className="game-card-detail">
+                  Jag formgav progression, svårighetskurva och spelarfeedback,
+                  från samlarobjekt och flygkraft till större strider.
+                </p>
+                <p className="game-card-hook">
+                  Klarar du dig hela vägen till slutbossen?
                 </p>
                 <span>
                   Spela på itch.io <span aria-hidden="true">↗</span>
