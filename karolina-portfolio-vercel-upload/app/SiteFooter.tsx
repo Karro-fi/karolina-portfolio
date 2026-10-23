@@ -15,14 +15,7 @@ export default function SiteFooter({
         </h2>
         <div className="footer-marquee" aria-hidden="true">
           <div className="footer-marquee-track">
-            {[0, 1].map((group) => (
-              <div className="footer-marquee-group" key={group}>
-                <span>Låt oss prata vidare</span>
-                <span className="footer-marquee-dot">●</span>
-                <span>Låt oss prata vidare</span>
-                <span className="footer-marquee-dot">●</span>
-              </div>
-            ))}
+            <span>Låt oss prata vidare</span>
           </div>
         </div>
 
