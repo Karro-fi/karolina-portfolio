@@ -353,8 +353,9 @@ export default function PortfolioHome() {
                 <h3 id="expertise-title">Det jag gör i praktiken</h3>
               </div>
               <p>
-                Kompetenser och verktyg som återkommer i mina projekt och min
-                utbildning.
+                Kompetenser och verktyg som återkommer
+                <br />
+                i mina projekt och min utbildning.
               </p>
             </div>
 
