@@ -198,7 +198,9 @@ export default function PortfolioHome() {
                   <p className="game-card-intro">
                     Ett vibekodat miniprojekt från en speldesignkurs: ett
                     plattformsspel i 2D med retrostil och åtta banor på vägen
-                    mot Blåkulla.
+                    mot Blåkulla. Med pixelgrafiken och retrostilen hoppas jag också att
+                    spelet väcker lite nostalgi hos den som växte upp med
+                    nittiotalets konsolspel.
                   </p>
                   <p className="game-card-detail">
                     Jag formgav progression, svårighetskurva och spelarfeedback
