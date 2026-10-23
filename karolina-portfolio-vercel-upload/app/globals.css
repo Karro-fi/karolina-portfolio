@@ -1101,6 +1101,95 @@ h1 {
   content: '';
 }
 
+.expertise-list .skill-gamification span {
+  position: relative;
+}
+
+.expertise-list .skill-gamification::after {
+  margin-left: -0.35rem;
+  color: var(--accent);
+  content: '\2726';
+  font-size: 0.7em;
+  opacity: 0;
+  transform: translate(-0.2rem, 0.25rem) scale(0.4) rotate(-25deg);
+}
+
+.expertise-list .skill-gamification:hover span {
+  animation: gamification-shimmer 1.05s ease-out;
+  background: linear-gradient(
+    105deg,
+    var(--foreground) 0%,
+    var(--foreground) 34%,
+    #ffffff 44%,
+    var(--accent) 51%,
+    #ffffff 58%,
+    var(--foreground) 68%,
+    var(--foreground) 100%
+  );
+  background-clip: text;
+  background-size: 240% 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.expertise-list .skill-gamification:hover::before {
+  animation: gamification-dot-glow 1.05s ease-out;
+}
+
+.expertise-list .skill-gamification:hover::after {
+  animation: gamification-sparkle 1.05s ease-out;
+}
+
+@keyframes gamification-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -140% 0;
+  }
+}
+
+@keyframes gamification-dot-glow {
+  45% {
+    box-shadow: 0 0 0.85rem 0.2rem color-mix(in srgb, var(--accent) 62%, transparent);
+    transform: scale(1.6);
+  }
+}
+
+@keyframes gamification-sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate(-0.2rem, 0.25rem) scale(0.4) rotate(-25deg);
+  }
+  42% {
+    opacity: 1;
+    transform: translate(0.15rem, -0.35rem) scale(1) rotate(12deg);
+  }
+  72% {
+    opacity: 0.65;
+    transform: translate(0.45rem, -0.55rem) scale(0.65) rotate(30deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .expertise-list .skill-gamification:hover span {
+    animation: none;
+    background: none;
+    color: var(--accent);
+  }
+
+  .expertise-list .skill-gamification:hover::before,
+  .expertise-list .skill-gamification:hover::after {
+    animation: none;
+  }
+
+  .expertise-list .skill-gamification:hover::after {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .lia-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(420px, 0.8fr);
@@ -2223,6 +2312,7 @@ h3 {
   width: 1.35rem;
   height: 1.35rem;
   flex: 0 0 auto;
+  color: var(--foreground);
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;

@@ -378,7 +378,12 @@ export default function PortfolioHome() {
                     'Videoredigering',
                     'Fotografi',
                   ].map((item) => (
-                    <li key={item}>{item}</li>
+                    <li
+                      className={item === 'Spelifiering' ? 'skill-gamification' : undefined}
+                      key={item}
+                    >
+                      <span>{item}</span>
+                    </li>
                   ))}
                 </ul>
               </section>
@@ -396,7 +401,12 @@ export default function PortfolioHome() {
                     'CapCut',
                     'Canva',
                   ].map((item) => (
-                    <li key={item}>{item}</li>
+                    <li
+                      className={item === 'Spelifiering' ? 'skill-gamification' : undefined}
+                      key={item}
+                    >
+                      <span>{item}</span>
+                    </li>
                   ))}
                 </ul>
               </section>
