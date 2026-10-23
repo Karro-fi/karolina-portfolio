@@ -200,7 +200,7 @@ export default function PortfolioHome() {
                     plattformsspel i 2D med retrostil och åtta banor på vägen
                     mot Blåkulla. Med pixelgrafiken och retrostilen hoppas jag också att
                     spelet väcker lite nostalgi hos den som växte upp med
-                    nittiotalets konsolspel.
+                    90-talets konsolspel.
                   </p>
                   <p className="game-card-detail">
                     Jag formgav progression, svårighetskurva och spelarfeedback
@@ -244,9 +244,8 @@ export default function PortfolioHome() {
                     efter användarens behov.
                   </p>
                   <p className="video-card-detail">
-                    Jag tog särskilt ansvar för klippning och redigering. Det var
-                    också den del av arbetet där min förkärlek för redigering
-                    verkligen kom till liv.
+                    Jag tog särskilt ansvar för klippning och redigering. Där fick jag
+                    verkligen användning för ett intresse som jag länge haft.
                   </p>
                   <p className="video-card-detail">
                     Jag arbetade även med bild och videoprompter i Google Gemini.
