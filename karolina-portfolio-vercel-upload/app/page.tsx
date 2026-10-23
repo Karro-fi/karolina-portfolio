@@ -63,18 +63,10 @@ export default function PortfolioHome() {
 
       <section className="home-work section-rule motion-line" id="work">
         <div className="site-shell">
-          <div className="home-section-head">
-            <div>
-              <p className="eyebrow">Portfolio</p>
-              <h2>Utvalda arbeten</h2>
-            </div>
-          </div>
-
           <section className="work-group" aria-labelledby="case-heading">
             <div className="work-group-heading">
               <div>
-                <p className="eyebrow">Fördjupade arbeten</p>
-                <h3 id="case-heading">Case</h3>
+                <h2 id="case-heading">Case</h2>
                 <p className="work-group-description">
                   Fördjupade projekt med process, designbeslut och resultat.
                 </p>
@@ -179,8 +171,7 @@ export default function PortfolioHome() {
           <section className="work-group work-group--mini" aria-labelledby="mini-heading">
             <div className="work-group-heading">
               <div>
-                <p className="eyebrow">Mindre format</p>
-                <h3 id="mini-heading">Miniprojekt</h3>
+                <h2 id="mini-heading">Miniprojekt</h2>
                 <p className="work-group-description">
                   Mindre arbeten inom spel, video och visuella experiment.
                 </p>
@@ -362,86 +353,53 @@ export default function PortfolioHome() {
                 <h3 id="expertise-title">Det jag gör i praktiken</h3>
               </div>
               <p>
-                Från research och flöden till visuell gestaltning, prototyper
-                och rörligt innehåll. Jag arbetar agilt och iterativt genom hela
-                processen.
+                Kompetenser och verktyg som återkommer i mina projekt och min
+                utbildning.
               </p>
             </div>
 
-            <div className="expertise-map">
-              <section className="expertise-row">
-                <h4>Förstår</h4>
-                <ul>
-                  {[
-                    'Användarresearch',
-                    'Användartester',
-                    'Tjänstedesign',
-                    'Tillgänglighet',
-                  ].map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </section>
-
-              <section className="expertise-row">
-                <h4>Formger</h4>
-                <ul>
+            <div className="expertise-columns">
+              <section className="expertise-block" aria-labelledby="skills-title">
+                <h4 id="skills-title">Kompetenser</h4>
+                <ul className="expertise-list expertise-list-skills">
                   {[
                     'UX/UI',
+                    'Användarresearch',
+                    'Användartester',
                     'Interaktionsdesign',
-                    'Speldesign',
+                    'Tillgänglighet',
+                    'Tjänstedesign',
                     'Spelifiering',
-                  ].map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </section>
-
-              <section className="expertise-row">
-                <h4>Producerar</h4>
-                <ul>
-                  {[
-                    'Videoredigering',
-                    'Fotografi',
-                    'Voiceover och ljudläggning',
-                  ].map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </section>
-
-              <section className="expertise-row">
-                <h4>Utforskar och itererar</h4>
-                <ul>
-                  {[
+                    'Speldesign',
                     'Generativ AI',
-                    'Promptutveckling för bild och video',
                     'AI assisterad prototypning',
                     'Agila arbetssätt',
+                    'Videoredigering',
+                    'Fotografi',
+                  ].map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </section>
+
+              <section className="expertise-block" aria-labelledby="tools-title">
+                <h4 id="tools-title">Verktyg</h4>
+                <ul className="expertise-list expertise-list-tools">
+                  {[
+                    'Figma',
+                    'Google Gemini',
+                    'ChatGPT',
+                    'Codex',
+                    'Miro',
+                    'Trello',
+                    'CapCut',
+                    'Canva',
                   ].map((item) => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
               </section>
             </div>
-
-            <section className="expertise-tools" aria-labelledby="tools-title">
-              <h4 id="tools-title">Verktyg jag arbetar i</h4>
-              <ul>
-                {[
-                  'Figma',
-                  'Google Gemini',
-                  'ChatGPT',
-                  'Codex',
-                  'Miro',
-                  'Trello',
-                  'CapCut',
-                  'Canva',
-                ].map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </section>
           </div>
         </div>
       </section>
