@@ -33,8 +33,8 @@ export default function SiteFooter({
                 focusable="false"
                 viewBox="0 0 24 24"
               >
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="m3 7 9 6 9-6" />
+                <path d="m22 2-7 20-4-9-9-4Z" />
+                <path d="M22 2 11 13" />
               </svg>
               <span>karolina.paraskevas@gmail.com</span>
             </a>
