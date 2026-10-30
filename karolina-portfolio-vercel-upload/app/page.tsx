@@ -101,6 +101,7 @@ export default function PortfolioHome() {
               <a
                 className="case-card"
                 href="/case/kommunal"
+                data-project-type="fictional-course-project"
                 aria-label="Läs projektet Kommunal Måendestöd"
               >
                 <div className="case-card-media case-card-media--kommunal">
