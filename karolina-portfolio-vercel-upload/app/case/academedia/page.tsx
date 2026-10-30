@@ -115,7 +115,7 @@ export default function Home() {
           <div className="eyebrow-row">
             <p className="eyebrow">UX/UI-case · Lärplattform</p>
             <div className="case-context" aria-label="Projektinformation">
-              <p className="case-index">Lästid · 6 min</p>
+              <p className="case-index">Lästid · 4 min</p>
             </div>
           </div>
 
@@ -179,55 +179,18 @@ export default function Home() {
               svårt att hitta rätt.
             </p>
             <p>
-              Osäkerheten följde användaren från sökning till anmälan: Vad är relevant för min
-              roll, vilket format gäller och vad blir nästa steg?
+              Osäkerheten följde användaren från sökning till anmälan: vad är relevant för min
+              roll och vad blir nästa steg? Målgruppen bestod av lärare, pedagoger,
+              administrativ personal och skolledare.
             </p>
+            <div className="case-question-compact">
+              <p className="eyebrow">Designfråga</p>
+              <p>
+                Hur kan dashboarden och utbildningskatalogen visa rollrelevant innehåll,
+                synliga framsteg och ett tydligt nästa steg?
+              </p>
+            </div>
           </div>
-        </div>
-
-        <div className="site-shell stat-strip" aria-label="Projektets omfattning">
-          <div>
-            <strong>700+</strong>
-            <span>verksamheter i norra Europa</span>
-          </div>
-          <div>
-            <strong>3</strong>
-            <span>länder: Sverige, Norge och Tyskland</span>
-          </div>
-          <div>
-            <strong>1</strong>
-            <span>gemensam lärplattform</span>
-          </div>
-        </div>
-        <div className="site-shell audience-compact" aria-label="Projektets målgrupper">
-          <div>
-            <p className="eyebrow">Målgrupp</p>
-            <h3>
-              <span className="heading-line">Tre roller.</span>
-              <span className="heading-line">Två gemensamma behov.</span>
-            </h3>
-            <p>
-              Hitta relevant innehåll och förstå nästa steg, oavsett roll eller verksamhet.
-            </p>
-          </div>
-          <div className="audience-role-list">
-            <span>Lärare & pedagoger</span>
-            <span>Administrativ personal</span>
-            <span>Skolledare</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="section statement-section">
-        <div className="site-shell statement-grid">
-          <p className="eyebrow">Designfråga</p>
-          <blockquote>
-            <span className="heading-line">Hur kan vi skapa en tydlig</span>
-            <span className="heading-line">dashboard och utbildningskatalog</span>
-            <span className="heading-line">som visar rollrelevanta utbildningar,</span>
-            <span className="heading-line">motiverar genom synliga framsteg</span>
-            <span className="heading-line">och gör nästa steg självklart?</span>
-          </blockquote>
         </div>
       </section>
 
@@ -250,8 +213,7 @@ export default function Home() {
             <ul className="contribution-list">
               <li>Byggde och samordnade den klickbara prototypen i Figma.</li>
               <li>Strukturerade komponenter, lager och arbetsflöde i FigJam och Figma.</li>
-              <li>Formgav ”AcadeMedia tipsar” som en tydlig, navigerbar karusell.</li>
-              <li>Definierade hovrings- och återkopplingslägen för utbildningskorten.</li>
+              <li>Formgav AcadeMedia tipsar med navigation, hovringslägen och återkoppling.</li>
             </ul>
           </div>
         </div>
@@ -272,10 +234,6 @@ export default function Home() {
                 sammanhanget.
               </p>
             </div>
-            <dl className="component-facts" aria-label="Mitt ansvar för komponenten">
-              <div><dt>Ansvar</dt><dd>Komponentdesign och prototyp</dd></div>
-              <div><dt>Fokus</dt><dd>Tydlig navigation och igenkänning</dd></div>
-            </dl>
           </div>
           <figure className="tipsar-visual">
             <img
@@ -321,16 +279,14 @@ export default function Home() {
                 <h4>Det fungerade</h4>
                 <ul>
                   <li>Progression och certifikat uppskattades.</li>
-                  <li>Kurskorten gav relevant information.</li>
-                  <li>Navigationen upplevdes intuitiv.</li>
+                  <li>Kurskort och navigation upplevdes tydliga.</li>
                 </ul>
               </div>
               <div>
                 <h4>Det behövde justeras</h4>
                 <ul>
                   <li>Kurser borde filtreras efter målgrupp automatiskt.</li>
-                  <li>CTA för nya utbildningar behövde högre prioritet.</li>
-                  <li>Nästa steg behövde bli mer framträdande.</li>
+                  <li>Nya utbildningar och nästa steg behövde högre prioritet.</li>
                 </ul>
               </div>
             </div>
@@ -338,30 +294,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section solution-section" id="solution">
-        <div className="site-shell section-heading solution-heading">
-          <p className="eyebrow">Slutlig lösning</p>
-          <h2>Ett lugnare gränssnitt med tydligare vägval.</h2>
-          <p>
-            Dashboarden prioriterar det som är relevant just nu. Katalogen hjälper användaren
-            att förstå innehållet innan ett beslut, och separata lärandeytor gör progressionen
-            lätt att följa.
-          </p>
-        </div>
-
-        <div className="site-shell full-visual">
-          <BrowserFrame
-            label="Academy · Dashboard"
-            src="/images/dashboard-start.webp"
-            alt="Hela den omdesignade dashboarden i Academy från välkomstyta till rekommenderade och obligatoriska utbildningar."
-            caption="Dashboardens första vy visas här. Öppna hela vyn för att följa den kompletta vertikala rytmen och prioriteringen mellan sektionerna."
-            className="dashboard-visual"
-            expandable
-          />
-        </div>
-      </section>
-
-      <section className="section section-rule catalog-section">
+      <section className="section section-rule catalog-section" id="solution">
         <div className="site-shell catalog-grid">
           <div className="sticky-copy">
             <p className="eyebrow">Utbildningskatalog</p>
@@ -392,8 +325,8 @@ export default function Home() {
           <p className="eyebrow">Lärandeytor</p>
           <h2>Progression som går att förstå med en blick.</h2>
           <p>
-            Påbörjade, avslutade och sparade utbildningar får varsin tydlig kontext. Det gör
-            det enklare att fortsätta, återvända eller hitta nästa relevanta kurs.
+            Påbörjade och sparade utbildningar får en tydlig kontext så att det blir enklare
+            att fortsätta eller återvända.
           </p>
         </div>
 
@@ -403,12 +336,6 @@ export default function Home() {
             src="/images/started-courses.webp"
             alt="Sidan för påbörjade utbildningar med progressionskort grupperade per verksamhet."
             caption="Påbörjade utbildningar visar återstående tid och progression."
-          />
-          <BrowserFrame
-            label="Avslutade"
-            src="/images/completed-courses.webp"
-            alt="Sidan för avslutade utbildningar med slutförda kurskort och hundra procents progression."
-            caption="Avslutade utbildningar gör resultat och certifikat synliga."
           />
           <BrowserFrame
             label="Sparade"
@@ -422,7 +349,7 @@ export default function Home() {
       <section className="section outcome-section">
         <div className="site-shell outcome-grid">
           <div>
-            <p className="eyebrow">Resultat & nästa steg</p>
+            <p className="eyebrow">Resultat</p>
             <h2>Vad valideringen visade.</h2>
           </div>
           <div className="outcome-copy">
@@ -434,7 +361,6 @@ export default function Home() {
               <div><p>Personliga rekommendationer minskar irrelevant innehåll.</p></div>
               <div><p>Synlig kursstatus gör nästa handling tydlig.</p></div>
               <div><p>Filter och konsekventa mönster stärker orientering och kontroll.</p></div>
-              <div><p>Stöd, tydliga tomlägen och återkoppling är naturliga nästa steg.</p></div>
             </div>
           </div>
         </div>
@@ -449,12 +375,12 @@ export default function Home() {
           <div className="reflection-copy">
             <p>
               Vi gick tidigt långt i Figma och fick backa när nya insikter kom. Det skapade
-              merarbete och gjorde den sena valideringen mer kostsam än den behövde vara.
+              merarbete.
             </p>
             <p>
               Min viktigaste lärdom är därför timing: utvärdera konceptet medan det fortfarande
-              är billigt att ändra. Jag tog också med mig hur mycket kognitiv energi ett team
-              sparar när struktur, komponenter och ansvar är tydliga från första dagen.
+              är billigt att ändra. Jag tog också med mig hur mycket enklare det blir att iterera
+              när komponenter, arbetsfiler och ansvar är tydliga från början.
             </p>
             <blockquote>
               Struktur är inte bara ordning i filerna. Det är ett designbeslut som gör bättre
