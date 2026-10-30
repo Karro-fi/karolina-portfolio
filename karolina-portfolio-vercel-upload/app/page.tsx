@@ -111,7 +111,7 @@ export default function PortfolioHome() {
                   />
                 </div>
                 <div className="case-card-copy">
-                  <p className="eyebrow">UX/UI · Självskattning · 2025 Q2</p>
+                  <p className="eyebrow">UX/UI · Fiktivt kursprojekt · 2025 Q2</p>
                   <h3>Kommunal Måendestöd</h3>
                   <p>
                     Ett lugnare självskattningsflöde som gör resultat och nästa

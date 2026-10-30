@@ -1380,6 +1380,15 @@ h1 {
     opacity: 1;
     transform: none;
   }
+
+  .case-page .process-grid::before,
+  .case-page .process-grid article > span,
+  .case-page .process-grid article > h3,
+  .case-page .process-grid article > p {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 :focus-visible {
@@ -1565,6 +1574,25 @@ h3 {
 .prose-large p:last-child,
 .prose-large > p:last-child {
   margin-bottom: 0;
+}
+
+.case-question-compact {
+  margin-top: var(--space-6);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--line);
+}
+
+.case-question-compact .eyebrow {
+  margin-bottom: var(--space-2);
+}
+
+.case-question-compact > p:last-child {
+  margin-bottom: 0;
+  color: var(--foreground);
+  font-family: var(--font-sora), sans-serif;
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.45;
 }
 
 .stat-strip {
@@ -1948,6 +1976,69 @@ h3 {
   transform: translateY(0);
 }
 
+@keyframes process-rule-scroll-reveal {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes process-copy-scroll-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .case-page .process-grid {
+    border-top-color: transparent;
+  }
+
+  .case-page .process-grid::before {
+    position: absolute;
+    z-index: 1;
+    top: -1px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: var(--line);
+    content: '';
+    transform-origin: left;
+    animation: process-rule-scroll-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
+
+  .case-page .process-grid article > span,
+  .case-page .process-grid article > h3,
+  .case-page .process-grid article > p {
+    animation: process-copy-scroll-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 4% cover 28%;
+  }
+
+  .case-page .process-grid article:nth-child(2) > span,
+  .case-page .process-grid article:nth-child(2) > h3,
+  .case-page .process-grid article:nth-child(2) > p {
+    animation-range: entry 8% cover 32%;
+  }
+
+  .case-page .process-grid article:nth-child(3) > span,
+  .case-page .process-grid article:nth-child(3) > h3,
+  .case-page .process-grid article:nth-child(3) > p {
+    animation-range: entry 12% cover 36%;
+  }
+}
+
 .process-grid article {
   min-height: 336px;
   display: grid;
@@ -2181,6 +2272,22 @@ h3 {
 .learning-gallery .browser-bar {
   height: var(--space-4);
   padding-inline: var(--space-1);
+}
+
+.solution-gallery-compact {
+  margin-top: var(--space-8);
+}
+
+.case-decisions-compact {
+  margin-top: var(--space-12);
+}
+
+.case-decisions-compact .section-heading {
+  margin-bottom: var(--space-6);
+}
+
+.editorial-case .case-decisions-compact .principle-grid article {
+  min-height: 260px;
 }
 
 .principle-section {
@@ -3022,3 +3129,4 @@ h3 {
     padding: var(--space-4);
   }
 }
+

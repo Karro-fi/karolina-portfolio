@@ -17,17 +17,17 @@ export default function CaseProgress() {
       const reducedMotion = window.matchMedia(
         '(prefers-reduced-motion: reduce)',
       ).matches;
+      const supportsScrollDrivenReveal = CSS.supports(
+        'animation-timeline: view()',
+      );
 
       if (reducedMotion) {
         processGrid.classList.add('is-revealed');
-      } else {
+      } else if (!supportsScrollDrivenReveal) {
         processGrid.classList.add('reveal-ready');
         processObserver = new IntersectionObserver(
           ([entry]) => {
-            if (!entry.isIntersecting) return;
-
-            processGrid.classList.add('is-revealed');
-            processObserver?.disconnect();
+            processGrid.classList.toggle('is-revealed', entry.isIntersecting);
           },
           {
             rootMargin: '0px 0px -10% 0px',
