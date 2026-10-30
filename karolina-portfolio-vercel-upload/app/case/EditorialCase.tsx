@@ -147,18 +147,11 @@ export default function EditorialCase(props: EditorialCaseProps) {
             {props.challengeText.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
+            <div className="case-question-compact">
+              <p className="eyebrow">Designfråga</p>
+              <p>{props.designQuestion.join(' ')}</p>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section className="section statement-section">
-        <div className="site-shell statement-grid">
-          <p className="eyebrow">Designfråga</p>
-          <blockquote>
-            {props.designQuestion.map((line) => (
-              <span className="heading-line" key={line}>{line}</span>
-            ))}
-          </blockquote>
         </div>
       </section>
 
@@ -233,22 +226,12 @@ export default function EditorialCase(props: EditorialCaseProps) {
         <div className="site-shell full-visual">
           <BrowserFrame label={`${props.title} · huvudflöde`} image={props.contributionImage} />
         </div>
-      </section>
-
-      <section className="section learning-section">
-        <div className="site-shell section-heading compact-heading">
-          <p className="eyebrow">Utvalda vyer</p>
-          <h2>Detaljer som bär helheten.</h2>
-        </div>
-        <div className="site-shell learning-gallery">
+        <div className="site-shell learning-gallery solution-gallery-compact">
           {props.gallery.map((image, index) => (
             <BrowserFrame key={image.src} label={`Vy 0${index + 1}`} image={image} />
           ))}
         </div>
-      </section>
-
-      <section className="section principle-section section-rule">
-        <div className="site-shell">
+        <div className="site-shell case-decisions-compact">
           <div className="section-heading compact-heading">
             <p className="eyebrow">Bärande designbeslut</p>
             <h2>{props.principlesTitle}</h2>
