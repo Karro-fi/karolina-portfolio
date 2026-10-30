@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function DuroCase() {
   return (
     <EditorialCase
-      readingTime="4 min"
+      readingTime="3 min"
       eyebrow="UX/UI-case · Tillgänglighet"
       title="Duro Sweden: tillgänglig webbhandel"
       intro="En tre veckor lång redesign av Duros webbhandel, skapad för att möta WCAG 2.1 AA, förenkla produktfiltreringen och göra vägen till rätt tapet mer begriplig."
@@ -38,8 +38,7 @@ export default function DuroCase() {
       }}
       challengeTitle="En vacker butik med onödiga barriärer."
       challengeText={[
-        'Duro är ett väletablerat svenskt tapetföretag med ett stort sortiment. Den befintliga webbhandeln hade låg kontrast, texttunga ytor och ett filtreringssystem som gjorde flera samtidiga val svåra.',
-        'Tillgänglighetsgranskningen och användartesterna visade också brister i tangentbordsnavigation, fokusmarkering, fältbeskrivningar och feedback när tapetprover lades i varukorgen.',
+        'Den befintliga webbhandeln hade låg kontrast, texttunga ytor och ett filter som gjorde flera samtidiga val svåra. Granskningen visade även brister i tangentbordsnavigation, fokusmarkering och återkoppling.',
       ]}
       designQuestion={[
         'Hur kan vi göra ett stort tapetsortiment',
@@ -56,7 +55,7 @@ export default function DuroCase() {
       contributionIntro="Jag drev designarbetet och samarbetade med en teammedlem för att bygga, testa och kvalitetssäkra prototyperna i Figma."
       contributionItems={[
         'Byggde komponenter, tillstånd och prototypflöden i Figma.',
-        'Sorterade färger och mönster alfabetiskt för lägre kognitiv belastning.',
+        'Sorterade färger och mönster alfabetiskt för att minska den kognitiva belastningen.',
         'Genomförde användartester som både observatör och testledare.',
         'Översatte granskningsresultat och användarinsikter till konkreta designbeslut.',
       ]}
@@ -66,26 +65,26 @@ export default function DuroCase() {
         caption: 'Menyn följer användaren, sparar val och behåller en tydlig väg även för tangentbordsnavigation.',
       }}
       processTitle="Från granskning till tillgänglig design."
-      processIntro="Vi omprövade tidiga antaganden, kombinerade tillgänglighetsgranskning med användartester och lät insikterna styra prototypen."
+      processIntro="Tillgänglighetsgranskning och användartester fick styra prototypen."
       processSteps={[
         {
           number: '01',
           title: 'Analys & tillgänglighetsgranskning',
-          text: 'Förstudie, konkurrentanalys, Silktide-granskning och tester med fyra personer synliggjorde låg kontrast, begränsade flerval, språkinkonsekvens och otydlig feedback.',
+          text: 'Silktide-granskning och tester med fyra personer synliggjorde låg kontrast, begränsade flerval och otydlig feedback.',
         },
         {
           number: '02',
           title: 'Koncept & snabbtester',
-          text: 'Vi tog fram parallella riktningar, valde den lösning som bäst svarade mot testdatan och snabbtestade hur kryssrutor, färger och kategorier tolkades.',
+          text: 'Vi snabbtestade hur kryssrutor, färger och kategorier tolkades och valde den tydligaste riktningen.',
         },
         {
           number: '03',
           title: 'Tillgänglig iteration',
-          text: 'Efter två tester gjorde vi hela fält klickbara, lade till rullningslist och en funktion för att rensa alla val, tydliggjorde fokusmarkeringen och rekommenderade bättre alternativtexter och tabbordning.',
+          text: 'Efter testerna gjorde vi hela fält klickbara, lade till rullningslist och rensa alla samt tydliggjorde fokusmarkering och tabbordning.',
         },
       ]}
       galleryTitle="Tydligare väg från sortiment till beslut."
-      galleryIntro="Resultatet skapar en lugnare produktöversikt och en tydligare informationsarkitektur även i stödjande innehåll."
+      galleryIntro="Resultatet skapar en lugnare produktöversikt och tydligare informationsarkitektur."
       gallery={[
         {
           src: '/images/duro-faq.png',
@@ -96,15 +95,15 @@ export default function DuroCase() {
       principlesTitle="Tillgänglighet som en del av helheten."
       principles={[
         { title: 'Kontrast som funktion', text: 'Text, fokus och handlingar får kontrast som stödjer både läsbarhet och prioritering.' },
-        { title: 'Tangentbord utan omvägar', text: 'Tydlig tabbordning, synlig fokusmarkering och förenklade vägar minskar antalet onödiga stopp.' },
-        { title: 'Lägre kognitiv belastning', text: 'Alfabetiska listor, flerval och kortare texter gör stora sortiment lättare att hantera.' },
+        { title: 'Tangentbord utan omvägar', text: 'Synlig fokusmarkering och logisk tabbordning minskar onödiga stopp.' },
+        { title: 'Lägre kognitiv belastning', text: 'Alfabetiska listor, flerval och kortare texter gör sortimentet lättare att hantera.' },
       ]}
       reflectionTitle="Tillgänglighet avgörs i detaljerna."
       reflectionText={[
-        'Projektets viktigaste vändpunkt kom när vi bromsade prototyparbetet och återvände till underlaget. När antaganden ersattes av data blev designbesluten både tydligare och lättare att motivera.',
-        'Testet med en person som har ADHD visade konkret hur textmängd och klarhet i popupfönster påverkar användbarheten. En missad fokusindikator blev samtidigt en påminnelse om hur ett enda avbrott kan skapa en stor barriär.',
+        'Projektets vändpunkt kom när vi bromsade prototyparbetet och återvände till underlaget. När antaganden ersattes av data blev designbesluten tydligare och lättare att motivera.',
+        'Ett av användartesterna genomfördes med en person med ADHD. Det visade tydligt hur textmängd och fokusmarkering påverkar användbarheten. En missad fokusindikator blev samtidigt en påminnelse om hur ett enda avbrott kan skapa en stor barriär.',
       ]}
-      quote="Det räcker inte att designen i övrigt är konsekvent. En enda miss i navigeringen kan skapa stora hinder."
+      quote="Det räcker inte att designen i övrigt är konsekvent. En enda miss i navigeringen kan skapa stora hinder för en användare."
       nextHref="/case/academedia"
       nextLabel="AcadeMedia Academy"
     />
