@@ -121,9 +121,9 @@ export default function Home() {
 
           <h1>En tydligare väg genom lärandet.</h1>
           <p className="hero-intro">
-            En personcentrerad redesign av AcadeMedia Academy som minskar
-            informationsöverflöd och gör relevant kompetensutveckling enklare att hitta och
-            fortsätta.
+            I det här projektet arbetade vi med att göra AcadeMedia Academy mer
+            personlig och lättare att hitta i, så att relevant kompetensutveckling
+            blir enklare att upptäcka och fortsätta.
           </p>
 
           <dl className="project-meta" aria-label="Projektfakta">
@@ -207,8 +207,8 @@ export default function Home() {
             <p className="eyebrow">Mitt bidrag</p>
             <h2>Struktur i både produkt och process.</h2>
             <p className="prose-large">
-              Jag ansvarade särskilt för den interaktiva Figma-prototypen, gränssnittets
-              visuella flöde och strukturen i teamets arbetsfiler.
+              Jag hade ett särskilt ansvar för den interaktiva prototypen i Figma,
+              det visuella flödet och strukturen i teamets arbetsfiler.
             </p>
             <ul className="contribution-list">
               <li>Byggde och samordnade den klickbara prototypen i Figma.</li>
@@ -230,8 +230,8 @@ export default function Home() {
                 hovringslägen och återkoppling.
               </p>
               <p>
-                Den hjälper användaren att upptäcka relevanta utbildningar utan att tappa
-                sammanhanget.
+                Tanken var att användaren skulle kunna upptäcka relevanta utbildningar
+                utan att tappa sammanhanget.
               </p>
             </div>
           </div>
@@ -300,9 +300,9 @@ export default function Home() {
             <p className="eyebrow">Utbildningskatalog</p>
             <h2>Mer information. Mindre osäkerhet.</h2>
             <p>
-              Filtrering efter roll, verksamhet, utbildningsform och plats ger kontroll över
-              ett stort kursutbud. Tydlig metadata och konsekventa kort gör det enklare att
-              avgöra om en utbildning passar.
+              Vi lade till filter för roll, verksamhet, utbildningsform och plats för att
+              göra det stora kursutbudet lättare att hantera. Tydlig information och
+              konsekventa kort gör det enklare att avgöra om en utbildning passar.
             </p>
             <ul className="feature-list">
               <li>Valda filter syns direkt och kan tas bort.</li>
@@ -354,8 +354,8 @@ export default function Home() {
           </div>
           <div className="outcome-copy">
             <p className="prose-large">
-              Utvärderingarna bekräftade att dashboarden gav en tydlig överblick och att
-              filter och informationshierarki gjorde katalogen lättare att använda.
+              I utvärderingarna såg vi att dashboarden gav en tydlig överblick och att
+              filtreringen och informationshierarkin gjorde katalogen lättare att använda.
             </p>
             <div className="outcome-list">
               <div><p>Personliga rekommendationer minskar irrelevant innehåll.</p></div>
