@@ -46,8 +46,9 @@ export default function PortfolioHome() {
           <div className="portfolio-hero-bottom">
             <div>
               <p className="hero-intro">
-                Jag kombinerar design, innehåll och digitala verktyg för att
-                forma genomtänkta uttryck som når fram.
+                Jag tycker om att kombinera design, innehåll och digitala
+                verktyg för att skapa uttryck som är genomtänkta, lätta att
+                förstå och som når fram.
               </p>
               <a className="text-link text-link-scroll" href="#work">
                 <span>Se mina projekt</span>
@@ -112,7 +113,7 @@ export default function PortfolioHome() {
                   />
                 </div>
                 <div className="case-card-copy">
-                  <p className="eyebrow">UX/UI · Fiktivt kursprojekt · 2025 Q2</p>
+                  <p className="eyebrow">UX/UI · Fiktivt projekt · 2025 Q2</p>
                   <h3>Kommunal Måendestöd</h3>
                   <p>
                     Ett lugnare självskattningsflöde som gör resultat och nästa
@@ -281,22 +282,22 @@ export default function PortfolioHome() {
             <article>
               <h3>Designgrunder</h3>
               <p>
-                Ett perspektiv grundat i designprinciper, användarcentrerade
-                metoder och tillgänglighet.
+                Jag utgår från designprinciper, användarcentrerade metoder och
+                tillgänglighet när jag bygger en lösning.
               </p>
             </article>
             <article>
               <h3>UI och visuell gestaltning</h3>
               <p>
-                Ett särskilt intresse för hur visuell estetik, typografi och
-                färglära möter funktionell layout och tydlig hierarki.
+                Jag tycker särskilt om mötet mellan visuell estetik, typografi,
+                färglära och en layout som är tydlig att använda.
               </p>
             </article>
             <article>
               <h3>Videoproduktion</h3>
               <p>
-                En passion för rörligt berättande och redigering i CapCut, från
-                idé till färdig visuell berättelse.
+                Jag har länge tyckt om rörligt berättande och redigering, från
+                den första idén till en färdig visuell berättelse.
               </p>
             </article>
           </div>
@@ -310,15 +311,15 @@ export default function PortfolioHome() {
               <p className="eyebrow">Om mig</p>
               <h2>Nyfiken på detaljerna som gör skillnad.</h2>
               <p>
-                Jag heter Karolina och studerar Experience Design på
-                Futuregames. Jag trivs i skärningspunkten mellan visuell form,
-                användarflöden och stark kommunikation.
+                Jag heter Karolina och studerar till Experience Designer på
+                Futuregames. Det jag tycker mest om är att kombinera visuell
+                form med tydliga användarflöden och kommunikation som når fram.
               </p>
               <p>
-                Jag arbetar strukturerat från research och koncept till färdig
-                design, med mottagaren och helheten i fokus. Oavsett format vill
-                jag skapa lösningar som känns relevanta, genomtänkta och lätta
-                att ta till sig.
+                Jag arbetar gärna från research och den första idén till färdig
+                design. För mig är det viktigt att förstå vem jag designar för
+                och att varje val, från struktur till detaljer, har ett tydligt
+                syfte.
               </p>
             </div>
 
@@ -427,8 +428,8 @@ export default function PortfolioHome() {
           </div>
           <div className="lia-copy">
             <p className="prose-large">
-              Jag vill bidra med nyfikenhet, struktur och ett starkt driv att
-              förstå både användare, team och produkt.
+              Jag vill gärna bidra med nyfikenhet, struktur och ett starkt driv
+              att förstå både användaren, teamet och det vi skapar tillsammans.
             </p>
             <p className="lia-period">
               <span>Period</span> 4 jan–21 maj 2027
