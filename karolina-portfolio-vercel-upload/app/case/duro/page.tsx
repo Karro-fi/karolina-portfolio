@@ -24,7 +24,7 @@ export default function DuroCase() {
       readingTime="3 min"
       eyebrow="UX/UI-case · Tillgänglighet"
       title="Duro Sweden: tillgänglig webbhandel"
-      intro="En tre veckor lång redesign av Duros webbhandel, skapad för att möta WCAG 2.1 AA, förenkla produktfiltreringen och göra vägen till rätt tapet mer begriplig."
+      intro="Under tre veckor arbetade vi med att göra Duros webbhandel mer tillgänglig, förenkla filtreringen och göra vägen till rätt tapet lättare att förstå."
       meta={[
         { label: 'Min roll', value: 'UX/UI-designer · testledare' },
         { label: 'Team', value: '4 Experience Designers' },
@@ -49,15 +49,15 @@ export default function DuroCase() {
       solutionTitle="En fokuserad och tillgänglig filtermeny"
       solutionText="En popupmeny med tydliga kategorier, kryssrutor, färgsymboler, alfabetisk sortering och handlingar som fungerar för både mus, tangentbord och mindre skärmar."
       contributionTitle={[
-        'Jag omsatte insikter',
-        'till tillgängliga designbeslut.',
+        'Mitt fokus var att göra insikterna',
+        'användbara i designen.',
       ]}
-      contributionIntro="Jag drev designarbetet och samarbetade med en teammedlem för att bygga, testa och kvalitetssäkra prototyperna i Figma."
+      contributionIntro="Jag drev designarbetet tillsammans med en teammedlem. Vi byggde och testade prototyperna i Figma och justerade dem efter det vi såg i testerna."
       contributionItems={[
         'Byggde komponenter, tillstånd och prototypflöden i Figma.',
         'Sorterade färger och mönster alfabetiskt för att minska den kognitiva belastningen.',
         'Genomförde användartester som både observatör och testledare.',
-        'Översatte granskningsresultat och användarinsikter till konkreta designbeslut.',
+        'Använde resultaten från granskningen och testerna i de fortsatta designbesluten.',
       ]}
       contributionImage={{
         src: '/images/duro-filter-iterations.png',
@@ -65,12 +65,12 @@ export default function DuroCase() {
         caption: 'Menyn följer användaren, sparar val och behåller en tydlig väg även för tangentbordsnavigation.',
       }}
       processTitle="Från granskning till tillgänglig design."
-      processIntro="Tillgänglighetsgranskning och användartester fick styra prototypen."
+      processIntro="Vi lät tillgänglighetsgranskningen och användartesterna styra hur prototypen utvecklades."
       processSteps={[
         {
           number: '01',
           title: 'Analys & tillgänglighetsgranskning',
-          text: 'Silktide-granskning och tester med fyra personer synliggjorde låg kontrast, begränsade flerval och otydlig feedback.',
+          text: 'Granskningen i Silktide och tester med fyra personer visade problem med låg kontrast, begränsade flerval och otydlig återkoppling.',
         },
         {
           number: '02',
@@ -80,7 +80,7 @@ export default function DuroCase() {
         {
           number: '03',
           title: 'Tillgänglig iteration',
-          text: 'Efter testerna gjorde vi hela fält klickbara, lade till rullningslist och rensa alla samt tydliggjorde fokusmarkering och tabbordning.',
+          text: 'Efter testerna gjorde vi hela fält klickbara, lade till en rullningslist och en tydlig funktion för att rensa alla val. Vi förbättrade även fokusmarkering och tabbordning.',
         },
       ]}
       galleryTitle="Tydligare väg från sortiment till beslut."
@@ -100,7 +100,7 @@ export default function DuroCase() {
       ]}
       reflectionTitle="Tillgänglighet avgörs i detaljerna."
       reflectionText={[
-        'Projektets vändpunkt kom när vi bromsade prototyparbetet och återvände till underlaget. När antaganden ersattes av data blev designbesluten tydligare och lättare att motivera.',
+        'Projektets vändpunkt kom när vi stannade upp och gick tillbaka till underlaget. När vi slutade utgå från antaganden och i stället tittade på det vi faktiskt hade sett blev designbesluten både tydligare och lättare att motivera.',
         'Ett av användartesterna genomfördes med en person med ADHD. Det visade tydligt hur textmängd och fokusmarkering påverkar användbarheten. En missad fokusindikator blev samtidigt en påminnelse om hur ett enda avbrott kan skapa en stor barriär.',
       ]}
       quote="Det räcker inte att designen i övrigt är konsekvent. En enda miss i navigeringen kan skapa stora hinder för en användare."
