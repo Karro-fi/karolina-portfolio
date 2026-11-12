@@ -210,7 +210,7 @@ export default function PortfolioHome() {
                     en finalboss.
                   </p>
                   <p className="game-card-hook">
-                    Klarar du dig hela vägen till slutbossen?
+                    Klarar du dig hela vägen till the final boss?
                   </p>
                   <span>
                     Spela på itch.io <span aria-hidden="true">↗</span>
