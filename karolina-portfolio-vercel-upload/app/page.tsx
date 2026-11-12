@@ -189,7 +189,7 @@ export default function PortfolioHome() {
               >
                 <div className="case-card-media case-card-media--game">
                   <img
-                    src="/images/haxan-till-blakulla.webp"
+                    src="/images/haxan-till-blakulla-v2.png"
                     alt="Pixelillustration från Häxan till Blåkulla med en liten häxa, plattformar, fiender och Blåkulla i bakgrunden."
                     loading="lazy"
                   />
@@ -220,20 +220,20 @@ export default function PortfolioHome() {
 
               <article
                 className="case-card case-card--mini case-card--video"
-                aria-label="Neuro Sense, video läggs till senare"
+                aria-label="Neuro Sense, utdrag ur presentationen"
               >
-                <div className="case-card-media video-placeholder" aria-hidden="true">
-                  <div className="video-placeholder-topline">
-                    <span>Neuro Sense</span>
-                    
-                  </div>
-                  <span className="video-play-symbol">▶</span>
-                  <div className="video-placeholder-timeline">
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                  </div>
+                <div className="case-card-media case-card-media--video">
+                  <video
+                    className="neuro-video"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster="/images/neuro-sense-poster-v1.png"
+                    aria-label="Utdrag ur presentationen för Neuro Sense"
+                  >
+                    <source src="/videos/neuro-sense-presentation-web.mp4" type="video/mp4" />
+                    Din webbläsare kan inte spela upp videon.
+                  </video>
                 </div>
                 <div className="case-card-copy">
                   <p className="eyebrow">
@@ -241,20 +241,20 @@ export default function PortfolioHome() {
                   </p>
                   <h3>Neuro Sense</h3>
                   <p>
-                    Neuro Sense är ett fiktivt koncept som vi tog fram i kursen
-                    Labb. Idén handlar om ett adaptivt hem som anpassar miljön
-                    efter användarens behov.
+                    Det här är ett utdrag ur presentationen för Neuro Sense, ett
+                    fiktivt koncept som vi tog fram i kursen Labb. Gränssnittet
+                    formgav vi gemensamt i gruppen.
                   </p>
                   <p className="video-card-detail">
-                    Jag tog särskilt ansvar för klippning och redigering. Där fick jag
-                    verkligen användning för ett intresse som jag länge haft.
+                    Jag ansvarade för den här delen av presentationen och
+                    arbetade med klippning och redigering. Jag tog även fram
+                    character sheets, samt bild och videoprompter i Google Gemini.
                   </p>
                   <p className="video-card-detail">
-                    Jag arbetade även med bild och videoprompter i Google Gemini.
                     I CapCut satte jag ihop materialet med röstspår, ljud, tajming
-                    och färgkorrigering till en sammanhängande konceptvideo.
+                    och färgkorrigering till en sammanhängande del av
+                    presentationen.
                   </p>
-                  <span>Video kommer inom kort</span>
                 </div>
               </article>
             </div>

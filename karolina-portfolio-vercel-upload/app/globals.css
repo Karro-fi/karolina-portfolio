@@ -624,6 +624,21 @@ h1 {
   object-position: center;
 }
 
+.case-card--video {
+  cursor: default;
+}
+
+.case-card-media--video {
+  background: #050907;
+}
+
+.neuro-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .video-placeholder {
   position: relative;
   display: grid;
