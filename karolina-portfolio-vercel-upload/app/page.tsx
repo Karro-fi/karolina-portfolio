@@ -241,19 +241,19 @@ export default function PortfolioHome() {
                   </p>
                   <h3>Neuro Sense</h3>
                   <p>
-                    Det här är ett utdrag ur presentationen för Neuro Sense, ett
-                    fiktivt koncept som vi tog fram i kursen Labb. Gränssnittet
-                    formgav vi gemensamt i gruppen.
+                    Neuro Sense är ett fiktivt koncept om ett adaptivt hem som
+                    anpassar miljön efter användarens behov. Vi tog fram konceptet
+                    i kursen Labb och formgav gränssnittet gemensamt i gruppen.
                   </p>
                   <p className="video-card-detail">
-                    Jag ansvarade för den här delen av presentationen och
-                    arbetade med klippning och redigering. Jag tog även fram
-                    character sheets, samt bild och videoprompter i Google Gemini.
+                    Det här är ett utdrag ur presentationen som jag ansvarade för.
+                    Jag skrev manus, tog fram character sheets, samt arbetade med
+                    bild och videoprompter i Google Gemini.
                   </p>
                   <p className="video-card-detail">
-                    I CapCut satte jag ihop materialet med röstspår, ljud, tajming
-                    och färgkorrigering till en sammanhängande del av
-                    presentationen.
+                    I CapCut klippte och redigerade jag materialet med röstspår,
+                    ljud, tajming och färgkorrigering för att få ihop en
+                    sammanhängande del av presentationen.
                   </p>
                 </div>
               </article>
